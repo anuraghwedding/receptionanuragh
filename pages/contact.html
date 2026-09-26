@@ -1,0 +1,107 @@
+<!-- <section class="contact-section">
+
+    <h2 class="contact-title">Leave Your Wishes ❤️</h2>
+
+    <form id="contactForm" class="contact-form">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            required
+        >
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            required
+        >
+
+        <textarea
+            id="message"
+            rows="6"
+            placeholder="Write your wishes..."
+            required
+        ></textarea>
+
+        <button type="submit">
+            Send Wishes
+        </button>
+
+    </form>
+
+    <p id="status"></p>
+
+</section> -->
+
+
+<section class="contact-section">
+    <div class="contact-card">
+        <h2 class="contact-title">Confirm Your Presence</h2>
+        <p class="contact-subtitle">We would be honoured to celebrate this cherished occasion with you.</p>
+
+        <form id="contactForm" class="contact-form">
+            <!-- Your name -->
+            <div class="form-group">
+                <label for="name">Your name</label>
+                <input type="text" id="name" placeholder="Your full name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Your email address" required>
+            </div>
+
+            <!-- Attendance Select -->
+            <div class="form-group">
+                <label for="attendance">Will you be attending?</label>
+                <select id="attendance" required>
+                    <option value="" disabled selected hidden>Select attendance</option>
+                    <option value="Yes">Joyfully Accept</option>
+                    <option value="No">Regretfully Decline</option>
+                </select>
+            </div>
+
+            <!-- Guest Count Select -->
+            <div class="form-group">
+                <label for="guestCount">Number of guests including you</label>
+                <select id="guestCount" required>
+                    <option value="" disabled selected hidden>Select guest count</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4+">4+</option>
+                </select>
+            </div>
+
+            <!-- Message (optional) -->
+            <div class="form-group">
+                <label for="message">Message (optional)</label>
+                <textarea id="message" rows="4" placeholder="A note for us (optional)"></textarea>
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-group">
+                <button type="submit" id="emailBtn" class="btn btn-email">
+                    Send RSVP by Email ✉
+                </button>
+                <button type="button" id="whatsappBtn" class="btn btn-whatsapp">
+                    Send RSVP on WhatsApp
+                </button>
+            </div>
+        </form>
+
+        <!-- Footer / Contact details -->
+        <div class="contact-info">
+            <p>Email: <strong>anuraghwedding@gmail.com</strong></p>
+            <p>WhatsApp: <strong>+91 7003038143</strong></p>
+            <p>Reference Number: <strong>+91 9852039695,</strong><strong>+91 8969293858,</strong><strong>+91 8757766766,</strong><strong>+91 9263809107,</strong></p>
+                Your phone/email app will open with the RSVP pre-filled.
+            </p>
+        </div>
+
+        <p id="status"></p>
+    </div>
+</section>

@@ -1,0 +1,1627 @@
+/* =====================================================
+   MEET THE COUPLE
+===================================================== */
+
+.meet-couple {
+
+    width: 100%;
+    height: 100vh;
+    min-height: 680px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 48%,
+            #fffdf9 0%,
+            #fff8f1 45%,
+            #f8e9df 100%
+        );
+
+    isolation: isolate;
+}
+
+
+/* =====================================================
+   SOFT CENTRAL LIGHT
+===================================================== */
+
+.wedding-glow {
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 220, 180, .55),
+            rgba(255, 220, 180, .15),
+            transparent 70%
+        );
+
+    filter: blur(40px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.couple-intro {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    text-align: center;
+
+    z-index: 20;
+
+    pointer-events: none;
+}
+
+
+.couple-intro p {
+
+    margin: 15px 0;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #9d7254;
+
+}
+
+
+.couple-intro h1 {
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(45px, 6vw, 78px);
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    color: #54392d;
+
+}
+
+
+.intro-line {
+
+    display: block;
+
+    width: 55px;
+
+    height: 1px;
+
+    margin: auto;
+
+    background: #b58a65;
+
+}
+
+
+.intro-heart {
+
+    display: block;
+
+    margin-top: 15px;
+
+    color: #a77b5a;
+
+    font-size: 25px;
+
+}
+
+
+/* =====================================================
+   BURST CONTAINER
+===================================================== */
+
+.burst-container {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 5;
+
+    pointer-events: none;
+
+}
+
+
+/* =====================================================
+   BURST PHOTOS
+===================================================== */
+
+.small-photo {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 105px;
+    height: 130px;
+
+    object-fit: cover;
+
+    transform:
+        translate(-50%, -50%)
+        scale(.2);
+
+    padding: 4px;
+
+    background: white;
+
+    border: 1px solid rgba(181,138,101,.5);
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 15px 35px rgba(70,40,25,.2);
+
+    opacity: 0;
+
+    will-change:
+        transform,
+        opacity,
+        filter;
+}
+
+
+.small-photo:nth-child(3n) {
+
+    width: 120px;
+    height: 145px;
+
+}
+
+
+.small-photo:nth-child(4n) {
+
+    width: 85px;
+    height: 105px;
+
+}
+
+
+/* =====================================================
+   FINAL COUPLE
+===================================================== */
+
+.couple-final {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: min(1250px, 96vw);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: clamp(
+        25px,
+        4vw,
+        70px
+    );
+
+    opacity: 0;
+
+    z-index: 15;
+
+    perspective: 1200px;
+}
+
+
+/* =====================================================
+   PERSON
+===================================================== */
+
+.person {
+
+    width: 30%;
+
+    max-width: 330px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    will-change:
+        transform,
+        opacity;
+}
+
+
+/* =====================================================
+   PORTRAIT
+===================================================== */
+
+.portrait-frame {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    padding: 7px;
+
+    background: white;
+
+    box-shadow:
+        0 25px 60px rgba(70,45,30,.20);
+
+    overflow: visible;
+
+}
+
+
+/* Actual image */
+
+.portrait-frame img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+/* =====================================================
+   GOLD FRAME
+===================================================== */
+
+.gold-frame {
+
+    position: absolute;
+
+    inset: -7px;
+
+    border: 1px solid #b58a65;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+}
+
+
+/* inner frame */
+
+.gold-frame::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 6px;
+
+    border: 1px solid rgba(181,138,101,.5);
+
+}
+
+
+/* =====================================================
+   FLOWER DECORATION
+===================================================== */
+
+.flower-decoration {
+
+    position: absolute;
+
+    top: -28px;
+
+    font-size: 35px;
+
+    color: #b58a65;
+
+    z-index: 5;
+
+}
+
+
+.flower-left {
+
+    left: -25px;
+
+}
+
+
+.flower-right {
+
+    right: -25px;
+
+}
+
+
+/* =====================================================
+   PERSON INFO
+===================================================== */
+
+.person-info {
+
+    margin-top: 22px;
+
+}
+
+
+.person-label {
+
+    display: block;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #9d7254;
+
+    margin-bottom: 8px;
+
+}
+
+
+.person h2 {
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(30px, 4vw, 48px);
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    color: #583d30;
+
+}
+
+
+/* =====================================================
+   NAME DECORATION
+===================================================== */
+
+.name-decoration {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 8px;
+
+    color: #a77b5a;
+
+    font-size: 13px;
+
+}
+
+
+.name-decoration span {
+
+    display: block;
+
+    width: 35px;
+
+    height: 1px;
+
+    background: #b58a65;
+
+}
+
+
+/* =====================================================
+   HEART AREA
+===================================================== */
+
+.heart-area {
+
+    width: 260px;
+
+    min-width: 260px;
+
+    height: 430px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =====================================================
+   3D HEART
+===================================================== */
+
+.heart-3d {
+
+    position: relative;
+
+    width: 190px;
+
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transform-style: preserve-3d;
+
+}
+
+
+/* glowing aura */
+
+.heart-glow {
+
+    position: absolute;
+
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,70,70,.55),
+            transparent 70%
+        );
+
+    filter: blur(25px);
+
+    animation:
+        heartGlow 2.2s ease-in-out infinite;
+
+}
+
+
+/* =====================================================
+   HEART SHAPE
+===================================================== */
+
+.heart-shape {
+
+    position: relative;
+
+    width: 105px;
+
+    height: 105px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff7777 0%,
+            #d92535 35%,
+            #a8001c 70%,
+            #62000d 100%
+        );
+
+    transform:
+        rotate(-45deg)
+        translateZ(20px);
+
+    border-radius:
+        12px 0 12px 0;
+
+    box-shadow:
+
+        inset
+        10px
+        10px
+        20px
+        rgba(255,255,255,.4),
+
+        inset
+        -15px
+        -15px
+        25px
+        rgba(60,0,10,.4),
+
+        0
+        20px
+        45px
+        rgba(100,0,20,.3);
+
+    animation:
+        heartFloat 2.8s ease-in-out infinite;
+
+}
+
+
+/* left + right lobes */
+
+.heart-shape::before,
+.heart-shape::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 105px;
+    height: 105px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff7777,
+            #c9152d 50%,
+            #75000e
+        );
+
+    border-radius: 50%;
+
+}
+
+
+/* left */
+
+.heart-shape::before {
+
+    top: -52px;
+
+    left: 0;
+
+}
+
+
+/* right */
+
+.heart-shape::after {
+
+    top: 0;
+
+    left: 52px;
+
+}
+
+
+/* =====================================================
+   INNER HEART
+===================================================== */
+
+.heart-inner {
+
+    position: absolute;
+
+    width: 70px;
+    height: 70px;
+
+    top: 17px;
+    left: 17px;
+
+    z-index: 5;
+
+    background:
+        radial-gradient(
+            circle at 35% 25%,
+            #ffb0b0,
+            #ed3348 35%,
+            #a90018 75%
+        );
+
+    transform: translateZ(15px);
+
+    opacity: .9;
+
+}
+
+
+/* =====================================================
+   HEART HIGHLIGHT
+===================================================== */
+
+.heart-highlight {
+
+    position: absolute;
+
+    width: 28px;
+    height: 15px;
+
+    background: rgba(255,255,255,.65);
+
+    border-radius: 50%;
+
+    top: 5px;
+    left: 25px;
+
+    transform:
+        rotate(25deg)
+        translateZ(35px);
+
+    filter: blur(2px);
+
+    z-index: 10;
+
+}
+
+
+/* =====================================================
+   GOLD ORBIT
+===================================================== */
+
+.heart-orbit {
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 70px;
+
+    border:
+
+        2px solid
+        rgba(191,145,77,.9);
+
+    border-radius: 50%;
+
+    transform:
+        rotate(-18deg)
+        translateZ(40px);
+
+    box-shadow:
+        0 0 10px rgba(201,155,82,.35);
+
+    animation:
+        orbitRotate 6s linear infinite;
+
+}
+
+
+.orbit-2 {
+
+    width: 200px;
+
+    height: 80px;
+
+    transform:
+        rotate(55deg)
+        translateZ(25px);
+
+    border-color:
+        rgba(220,180,105,.65);
+
+    animation-duration: 8s;
+
+    animation-direction: reverse;
+
+}
+
+
+/* =====================================================
+   HEART CAPTION
+===================================================== */
+
+.heart-caption {
+
+    margin-top: 35px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.heart-caption span {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 5px;
+
+    color: #9d7254;
+
+}
+
+
+.heart-caption strong {
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    color: #704b37;
+
+}
+
+
+/* =====================================================
+   SPARKLES
+===================================================== */
+
+.sparkle {
+
+    position: absolute;
+
+    color: #b58a65;
+
+    z-index: 10;
+
+    opacity: .8;
+
+}
+
+
+.sparkle-1 {
+
+    top: 20px;
+    left: 35px;
+
+    font-size: 20px;
+
+}
+
+
+.sparkle-2 {
+
+    top: 75px;
+    right: 20px;
+
+    font-size: 14px;
+
+}
+
+
+.sparkle-3 {
+
+    bottom: 130px;
+    left: 20px;
+
+    font-size: 15px;
+
+}
+
+
+.sparkle-4 {
+
+    top: 110px;
+    left: 20px;
+
+    font-size: 25px;
+
+}
+
+
+.sparkle-5 {
+
+    bottom: 100px;
+    right: 35px;
+
+    font-size: 18px;
+
+}
+
+
+/* =====================================================
+   HEART ANIMATIONS
+===================================================== */
+
+@keyframes heartFloat {
+
+    0%,
+    100% {
+
+        transform:
+            rotate(-45deg)
+            translateY(0)
+            translateZ(20px);
+
+    }
+
+    50% {
+
+        transform:
+            rotate(-45deg)
+            translateY(-8px)
+            translateZ(35px);
+
+    }
+
+}
+
+
+@keyframes heartGlow {
+
+    0%,
+    100% {
+
+        transform: scale(.9);
+
+        opacity: .6;
+
+    }
+
+    50% {
+
+        transform: scale(1.15);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+@keyframes orbitRotate {
+
+    from {
+
+        transform:
+            rotate(-18deg)
+            rotateZ(0deg)
+            translateZ(40px);
+
+    }
+
+    to {
+
+        transform:
+            rotate(-18deg)
+            rotateZ(360deg)
+            translateZ(40px);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+/* =========================================================
+   MOBILE — VERTICAL WEDDING STORY
+========================================================= */
+
+/* =========================================================
+   VIBRANT MOBILE WEDDING DESIGN
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .meet-couple {
+        position: relative;
+
+        width: 100%;
+        height: 100svh;
+        min-height: 680px;
+
+        overflow: hidden;
+
+        background:
+            radial-gradient(
+                circle at 50% 18%,
+                rgba(255, 214, 174, 0.95) 0%,
+                rgba(255, 190, 166, 0.75) 22%,
+                transparent 48%
+            ),
+            radial-gradient(
+                circle at 15% 70%,
+                rgba(236, 143, 160, 0.35),
+                transparent 42%
+            ),
+            radial-gradient(
+                circle at 85% 65%,
+                rgba(217, 157, 92, 0.32),
+                transparent 42%
+            ),
+            linear-gradient(
+                145deg,
+                #fff0e6 0%,
+                #f9d6c8 45%,
+                #f3c1b6 72%,
+                #ead0b0 100%
+            );
+    }
+
+
+    /* -----------------------------------------
+       VIBRANT CENTRAL LIGHT
+    ----------------------------------------- */
+
+    .wedding-glow {
+
+        width: 500px;
+        height: 500px;
+
+        left: 50%;
+        top: 45%;
+
+        transform: translate(-50%, -50%);
+
+        background:
+            radial-gradient(
+                circle,
+                rgba(255, 235, 190, 0.85) 0%,
+                rgba(255, 178, 155, 0.40) 35%,
+                rgba(222, 118, 137, 0.18) 55%,
+                transparent 72%
+            );
+
+        filter: blur(35px);
+
+        opacity: .9;
+    }
+
+
+    /* -----------------------------------------
+       SUBTLE WEDDING LIGHT RINGS
+    ----------------------------------------- */
+
+    .meet-couple::before {
+
+        content: "";
+
+        position: absolute;
+
+        width: 380px;
+        height: 380px;
+
+        left: 50%;
+        top: 42%;
+
+        transform: translate(-50%, -50%);
+
+        border-radius: 50%;
+
+        border: 1px solid rgba(181, 138, 101, .22);
+
+        box-shadow:
+            0 0 0 35px rgba(181,138,101,.06),
+            0 0 0 70px rgba(181,138,101,.04);
+
+        pointer-events: none;
+
+        z-index: 1;
+    }
+
+
+    /* -----------------------------------------
+       INTRO
+    ----------------------------------------- */
+
+    .couple-intro {
+
+        width: 90%;
+
+        z-index: 30;
+    }
+
+    .couple-intro p {
+
+        font-size: 8px;
+
+        letter-spacing: 4px;
+
+        color: #8e5748;
+    }
+
+    .couple-intro h1 {
+
+        font-size: clamp(38px, 11vw, 58px);
+
+        color: #61372f;
+
+        text-shadow:
+            0 3px 15px rgba(120,60,40,.12);
+    }
+
+
+    /* -----------------------------------------
+       PHOTO BURST
+    ----------------------------------------- */
+
+    .burst-container {
+
+        position: absolute;
+
+        inset: 0;
+
+        z-index: 10;
+
+        overflow: hidden;
+
+        pointer-events: none;
+    }
+
+    .small-photo {
+
+        width: 68px;
+        height: 88px;
+
+        padding: 3px;
+
+        border-radius: 5px;
+
+        border: 1px solid rgba(181,138,101,.65);
+
+        background: #fffaf4;
+
+        box-shadow:
+            0 12px 28px rgba(85,40,30,.20);
+
+        will-change:
+            transform,
+            opacity;
+    }
+
+    .small-photo:nth-child(3n) {
+
+        width: 78px;
+        height: 98px;
+    }
+
+    .small-photo:nth-child(4n) {
+
+        width: 60px;
+        height: 78px;
+    }
+
+
+    /* -----------------------------------------
+       FINAL COUPLE
+    ----------------------------------------- */
+
+    .couple-final {
+
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+
+        width: 100%;
+
+        height: 96svh;
+
+        padding:
+            18px
+            15px
+            22px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 0;
+
+        z-index: 20;
+
+        opacity: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    /* -----------------------------------------
+       PERSON
+    ----------------------------------------- */
+
+    .person {
+
+        width: 100%;
+
+        max-width: 230px;
+
+        text-align: center;
+
+        opacity: 0;
+
+        flex-shrink: 0;
+    }
+
+
+    /* -----------------------------------------
+       PORTRAIT
+    ----------------------------------------- */
+
+    .portrait-frame {
+
+        width: 170px;
+
+        aspect-ratio: 4 / 5;
+
+        padding: 5px;
+
+        margin: 0 auto;
+
+        background: rgba(255,255,255,.94);
+
+        box-shadow:
+            0 18px 45px rgba(80,40,30,.22);
+
+        box-sizing: border-box;
+    }
+
+
+    .portrait-frame img {
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        display: block;
+    }
+
+
+    /* -----------------------------------------
+       GOLD FRAME
+    ----------------------------------------- */
+
+    .gold-frame {
+
+        inset: -5px;
+
+        border-color:
+            rgba(169,120,66,.9);
+    }
+
+    .gold-frame::after {
+
+        inset: 4px;
+
+        border-color:
+            rgba(169,120,66,.45);
+    }
+
+
+    /* -----------------------------------------
+       FLOWER
+    ----------------------------------------- */
+
+    .flower-decoration {
+
+        top: -17px;
+
+        font-size: 20px;
+
+        color: #b47a50;
+
+        text-shadow:
+            0 3px 10px rgba(160,80,60,.18);
+    }
+
+    .flower-left {
+        left: -12px;
+    }
+
+    .flower-right {
+        right: -12px;
+    }
+
+
+    /* -----------------------------------------
+       PERSON INFO
+    ----------------------------------------- */
+
+    .person-info {
+
+        position: relative;
+
+        margin-top: 8px;
+
+        z-index: 10;
+
+        min-height: 58px;
+    }
+
+    .person-label {
+
+        display: block;
+
+        font-size: 7px;
+
+        line-height: 1.2;
+
+        letter-spacing: 3px;
+
+        color: #8f5d4c;
+
+        margin-bottom: 5px;
+    }
+
+
+    /* IMPORTANT:
+       Prevent name from getting cut
+    */
+
+    .person h2 {
+
+        display: block;
+
+        position: relative;
+
+        margin: 0;
+
+        padding: 0;
+
+        width: 100%;
+
+        white-space: nowrap;
+
+        overflow: visible;
+
+        line-height: 1.15;
+
+        font-size: 27px;
+
+        font-weight: 400;
+
+        font-family:
+            Georgia,
+            "Times New Roman",
+            serif;
+
+        font-style: italic;
+
+        color: #59352d;
+
+        text-shadow:
+            0 2px 8px rgba(90,50,40,.10);
+
+        z-index: 15;
+    }
+
+
+    /* -----------------------------------------
+       NAME DECORATION
+    ----------------------------------------- */
+
+    .name-decoration {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 7px;
+
+        margin-top: 5px;
+
+        font-size: 10px;
+
+        color: #a36d50;
+    }
+
+    .name-decoration span {
+
+        width: 22px;
+
+        height: 1px;
+
+        background:
+            rgba(163,109,80,.65);
+    }
+
+
+    /* -----------------------------------------
+       HEART
+    ----------------------------------------- */
+
+    .heart-area {
+
+        width: 130px;
+
+        min-width: 130px;
+
+        height: 125px;
+
+        flex-shrink: 0;
+
+        position: relative;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        margin: 0;
+    }
+
+
+    .heart-3d {
+
+        width: 120px;
+
+        height: 120px;
+
+        transform: scale(.47);
+
+        transform-origin: center;
+    }
+
+
+    .heart-caption {
+
+        position: absolute;
+
+        left: 50%;
+
+        top: 82px;
+
+        transform: translateX(-50%);
+
+        width: 130px;
+
+        margin: 0;
+
+        gap: 3px;
+
+        z-index: 20;
+    }
+
+    .heart-caption span {
+
+        font-size: 6px;
+
+        letter-spacing: 2px;
+
+        color: #8f5d4c;
+    }
+
+    .heart-caption strong {
+
+        font-size: 10px;
+
+        letter-spacing: 1px;
+
+        color: #704235;
+    }
+
+
+    /* -----------------------------------------
+       SPARKLES
+    ----------------------------------------- */
+
+    .sparkle {
+
+        color: #b88752;
+
+        text-shadow:
+            0 0 8px rgba(255,210,150,.7);
+    }
+
+    .sparkle-1 {
+        top: 2px;
+        left: 10px;
+        font-size: 14px;
+    }
+
+    .sparkle-2 {
+        top: 20px;
+        right: 3px;
+        font-size: 11px;
+    }
+
+    .sparkle-3 {
+        bottom: 10px;
+        left: 3px;
+        font-size: 12px;
+    }
+
+    .sparkle-4 {
+        top: 35px;
+        left: 4px;
+        font-size: 15px;
+    }
+
+    .sparkle-5 {
+        bottom: 8px;
+        right: 5px;
+        font-size: 13px;
+    }
+
+
+    /* -----------------------------------------
+       PETALS
+    ----------------------------------------- */
+
+    .petals-container {
+
+        z-index: 25;
+
+        pointer-events: none;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .meet-couple {
+        min-height: 100svh;
+        height: 100svh;
+    }
+
+    .couple-final {
+
+        height: 95svh;
+
+        padding:
+            10px
+            10px
+            18px;
+    }
+
+    .portrait-frame {
+
+        width: 155px;
+    }
+
+    .person h2 {
+
+        font-size: 24px;
+
+        white-space: nowrap;
+    }
+
+    .person-info {
+
+        min-height: 55px;
+
+        margin-top: 6px;
+    }
+
+    .heart-area {
+
+        height: 105px;
+
+        width: 115px;
+
+        min-width: 115px;
+    }
+
+    .heart-3d {
+
+        transform: scale(.40);
+    }
+
+    .heart-caption {
+
+        top: 70px;
+
+        width: 115px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .couple-final {
+
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+
+    .portrait-frame {
+
+        width: 140px;
+    }
+
+    .person h2 {
+
+        font-size: 22px;
+    }
+
+    .person-info {
+
+        min-height: 50px;
+    }
+
+    .heart-area {
+
+        height: 90px;
+
+        width: 105px;
+
+        min-width: 105px;
+    }
+
+    .heart-3d {
+
+        transform: scale(.34);
+    }
+
+    .heart-caption {
+
+        top: 61px;
+
+        width: 105px;
+    }
+
+    .heart-caption strong {
+
+        font-size: 8px;
+    }
+}

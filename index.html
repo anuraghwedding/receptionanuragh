@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styleSheets/style.css">
+    <link rel="stylesheet" href="./styleSheets/openingVideo.css">
+    <link rel="stylesheet" href="./styleSheets/welcome.css">
+    <link rel="stylesheet" href="./styleSheets/saveTheDate.css">
+    <link rel="stylesheet" href="./styleSheets/meetCouple.css">
+    <link rel="stylesheet" href="./styleSheets/ourJourney.css">
+    <link rel="stylesheet" href="./styleSheets/capturedMoments.css">
+    <link rel="stylesheet" href="./styleSheets/event-schedule.css">
+    <link rel="stylesheet" href="./styleSheets/our-venues.css">
+    <link rel="stylesheet" href="./styleSheets/family.css">
+    <link rel="stylesheet" href="./styleSheets/contact.css">
+    <link rel="stylesheet" href="./styleSheets/event-schedule.css">
+    <link rel="stylesheet" href="./styleSheets/footer.css">
+    <!-- <link rel="stylesheet" href="./styleSheets/test.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        /* Background-music toggle — only shown once the main site loads */
+        #musicToggle {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            z-index: 999;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: 1px solid rgba(232, 188, 99, .6);
+            background: rgba(20, 12, 8, .78);
+            color: #e8bc63;
+            font-size: 18px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, .35);
+            backdrop-filter: blur(4px);
+            transition: transform .25s ease, background .25s ease;
+        }
+
+        #musicToggle.is-visible {
+            display: flex;
+        }
+
+        #musicToggle:hover {
+            transform: scale(1.08);
+        }
+
+        #musicToggle .music-icon {
+            display: inline-block;
+            animation: musicSpin 3.5s linear infinite;
+            animation-play-state: paused;
+        }
+
+        #musicToggle.is-playing .music-icon {
+            animation-play-state: running;
+        }
+
+        @keyframes musicSpin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="petals-container"></div>
+    <div id="app"></div>
+
+    <audio id="bgMusic" src="./public/audio/wedding-song.mpeg" loop preload="auto"></audio>
+    <button id="musicToggle" type="button" aria-label="Toggle background music" title="Play music">
+        <span class="music-icon">♪</span>
+    </button>
+
+    <script src="./scripts/contact.js"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js
+"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/tsparticles@4.4.0/tsparticles.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/all@3/tsparticles.all.bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./scripts/welcome.js"></script>
+    <script src="./scripts/meetCouple.js"></script>
+    <script src="./scripts/openingVideo.js"></script>
+    <script src="./scripts/petals.js"></script>
+    <script src="./scripts/saveTheDate.js"></script>
+    <script src="./scripts/capturedMoments.js"></script>
+    <script src="./scripts/event-schedule.js"></script>
+    <script src="./scripts/our-venues.js"></script>
+    <script src="./scripts/ourJourney.js"></script>
+    <script src="./scripts/family.js"></script>
+    <!-- <script src="./scripts/test.js"></script> -->
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.13/dist/lenis.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,416 @@
+/* =========================================================
+   CAPTURED MOMENTS
+========================================================= */
+
+.captured-moments {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 75px 0 55px;
+
+    background: #edf5e8;
+
+    overflow: hidden;
+
+    position: relative;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.gallery-header {
+    position: relative;
+    z-index: 5;
+
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.section-subtitle {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 6px;
+
+    text-transform: uppercase;
+
+    color: #b29b58;
+}
+
+
+/* GOLD HEART */
+
+.gold-heart-divider {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    width: 210px;
+
+    margin: 12px auto 15px;
+}
+
+.gold-heart-divider span {
+    width: 75px;
+    height: 1px;
+
+    background: #c5aa69;
+}
+
+.gold-heart-divider b {
+    color: #c5aa69;
+
+    font-size: 18px;
+
+    font-weight: 400;
+}
+
+
+/* TITLE */
+
+.section-title {
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 60px;
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    color: #972741;
+}
+
+
+/* =========================================================
+   GALLERY WINDOW
+========================================================= */
+
+.gallery-marquee {
+    width: 100%;
+
+    overflow: hidden;
+
+    position: relative;
+
+    z-index: 3;
+
+    /*
+       Extra vertical space because centre image
+       becomes larger
+    */
+    padding: 35px 0 45px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MOVING TRACK
+========================================================= */
+
+.gallery-track {
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+
+    width: max-content;
+
+    will-change: transform;
+}
+
+
+/* =========================================================
+   PHOTO
+========================================================= */
+
+.gallery-item {
+
+    flex: 0 0 auto;
+
+    width: 210px;
+    height: 300px;
+
+    padding: 6px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
+
+    /*
+       JavaScript controls scale.
+       This makes scaling smooth.
+    */
+    transform-origin: center center;
+
+    will-change: transform, opacity;
+
+    transition:
+        transform 0.08s linear,
+        opacity 0.08s linear;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.gallery-item img {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 22px;
+
+    user-select: none;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CAPTION
+========================================================= */
+
+.gallery-bottom {
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+
+    margin-top: 20px;
+}
+
+.gallery-caption {
+
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 31px;
+
+    font-style: italic;
+
+    font-weight: 500;
+
+    color: #972741;
+}
+
+.gallery-caption span {
+    font-family: sans-serif;
+
+    font-style: normal;
+
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   BOTTOM DIVIDER
+========================================================= */
+
+.caption-divider {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    width: 330px;
+
+    margin: 15px auto 0;
+}
+
+.caption-divider span {
+
+    width: 120px;
+    height: 1px;
+
+    background: #c5aa69;
+}
+
+.caption-divider b {
+
+    color: #c5aa69;
+
+    font-size: 25px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   BOTANICAL DECORATION
+========================================================= */
+
+.gallery-leaves {
+    position: absolute;
+
+    z-index: 1;
+
+    color: #cdbd91;
+
+    opacity: 0.5;
+
+    pointer-events: none;
+}
+
+.gallery-leaves-left {
+
+    top: -15px;
+    left: -30px;
+
+    width: 190px;
+    height: 190px;
+
+    transform: rotate(-25deg);
+}
+
+.gallery-leaves-left span {
+
+    font-family: Georgia, serif;
+
+    font-size: 110px;
+
+    color: #d1c095;
+}
+
+.gallery-leaves-right {
+
+    right: -35px;
+    bottom: -15px;
+
+    width: 200px;
+    height: 200px;
+
+    transform: rotate(155deg);
+}
+
+.gallery-leaves-right span {
+
+    font-family: Georgia, serif;
+
+    font-size: 110px;
+
+    color: #d1c095;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .captured-moments {
+        min-height: auto;
+
+        padding: 50px 0 40px;
+    }
+
+    .gallery-header {
+        margin-bottom: 30px;
+    }
+
+    .section-subtitle {
+        font-size: 9px;
+        letter-spacing: 4px;
+    }
+
+    .section-title {
+        font-size: 43px;
+    }
+
+    .gallery-marquee {
+        padding: 30px 0 40px;
+    }
+
+    .gallery-track {
+        gap: 16px;
+    }
+
+    .gallery-item {
+
+        width: 190px;
+        height: 280px;
+
+        border-radius: 22px;
+
+        padding: 5px;
+    }
+
+    .gallery-item img {
+        border-radius: 17px;
+    }
+
+    .gallery-caption {
+        font-size: 25px;
+    }
+
+    .caption-divider {
+        width: 250px;
+    }
+
+    .caption-divider span {
+        width: 90px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .section-title {
+        font-size: 37px;
+    }
+
+    .gallery-item {
+
+        width: 70vw;
+        height: 400px;
+
+        border-radius: 20px;
+    }
+
+    .gallery-item img {
+        border-radius: 15px;
+    }
+
+    .gallery-caption {
+        font-size: 23px;
+    }
+}

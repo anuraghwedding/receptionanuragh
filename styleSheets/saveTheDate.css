@@ -1,0 +1,2003 @@
+/* =========================================================
+   SAVE THE DATE
+========================================================= */
+
+.save-date-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 100px 20px 120px;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 0, 100, 0.22),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(145, 0, 255, 0.22),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(255, 180, 0, 0.15),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #23000d,
+            #4b061d 45%,
+            #250019
+        );
+
+    color: #fff;
+
+    font-family:
+        "Poppins",
+        "Segoe UI",
+        sans-serif;
+}
+
+
+/* =========================================================
+   AMBIENT GLOW
+========================================================= */
+
+.ambient {
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    pointer-events: none;
+
+    opacity: 0.35;
+}
+
+.ambient-1 {
+    top: -150px;
+    left: -100px;
+
+    background: #ff287c;
+
+    animation: ambientMove1 8s ease-in-out infinite alternate;
+}
+
+.ambient-2 {
+    right: -150px;
+    top: 30%;
+
+    background: #9c27ff;
+
+    animation: ambientMove2 10s ease-in-out infinite alternate;
+}
+
+.ambient-3 {
+    bottom: -180px;
+    left: 40%;
+
+    background: #ffb300;
+
+    animation: ambientMove3 12s ease-in-out infinite alternate;
+}
+
+@keyframes ambientMove1 {
+    to {
+        transform: translate(100px, 100px);
+    }
+}
+
+@keyframes ambientMove2 {
+    to {
+        transform: translate(-100px, 70px);
+    }
+}
+
+@keyframes ambientMove3 {
+    to {
+        transform: translate(-80px, -80px);
+    }
+}
+
+
+/* =========================================================
+   MAIN WRAPPER
+========================================================= */
+
+.save-date-wrapper {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    max-width: 850px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.save-date-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 10px;
+}
+
+.save-date-heading p {
+    margin: 0;
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    color: #ffd56a;
+
+    font-weight: 600;
+}
+
+.heading-line {
+    width: 60px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ffd56a
+        );
+}
+
+.heading-line:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            #ffd56a,
+            transparent
+        );
+}
+
+
+.save-date-title {
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(45px, 8vw, 80px);
+
+    font-weight: 500;
+
+    color: #fff4d0;
+
+    text-shadow:
+        0 5px 25px rgba(255, 180, 0, 0.3);
+}
+
+
+.save-date-intro {
+    margin: 8px 0 45px;
+
+    font-size: 14px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   CARD STAGE
+========================================================= */
+
+.invitation-stage {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.invitation-card {
+    position: relative;
+
+    width: min(360px, 82vw);
+
+    min-height: 460px;
+
+    border-radius: 24px;
+
+    padding: 5px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd76a,
+            #fff1a8,
+            #b87813,
+            #ffeaa0,
+            #a96409
+        );
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.55),
+        0 0 45px rgba(255, 190, 60, 0.2);
+
+    transform:
+        perspective(1200px)
+        rotateX(0deg);
+
+    transition:
+        transform 0.7s ease,
+        box-shadow 0.7s ease;
+
+    isolation: isolate;
+}
+
+.invitation-card:hover {
+    transform:
+        perspective(1200px)
+        rotateX(2deg)
+        translateY(-5px);
+
+    box-shadow:
+        0 35px 100px rgba(0, 0, 0, 0.65),
+        0 0 70px rgba(255, 190, 60, 0.3);
+}
+
+
+/* =========================================================
+   CARD INNER
+========================================================= */
+
+.invitation-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 5px;
+
+    border-radius: 20px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(255, 255, 255, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #650b2c,
+            #380017 60%,
+            #23000e
+        );
+
+    z-index: -1;
+}
+
+
+.card-glow {
+    position: absolute;
+
+    inset: -20px;
+
+    border-radius: 35px;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(255, 180, 50, 0.22),
+            transparent 65%
+        );
+
+    filter: blur(25px);
+
+    z-index: -2;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.save-date-content {
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 450px;
+
+    padding:
+        45px
+        22px
+        30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.small-text {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #f8d987;
+
+    margin-bottom: 20px;
+}
+
+
+.ornament {
+    display: flex;
+
+    gap: 12px;
+
+    color: #f5c85b;
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+
+.save-date-content h1 {
+    margin: 0 0 10px;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(28px, 7vw, 40px);
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    color: #fff3ca;
+
+    text-shadow:
+        0 3px 15px rgba(255, 210, 100, 0.25);
+}
+
+
+/* =========================================================
+   COUPLE NAME
+========================================================= */
+
+.couple-name {
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+
+    color: #fff;
+
+    letter-spacing: 1px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.couple-name span {
+    color: #f8c95d;
+
+    font-size: 16px;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   DATE DIVIDER
+========================================================= */
+
+.date-divider {
+    width: 80%;
+
+    max-width: 230px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+.date-divider span {
+    height: 1px;
+
+    flex: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #dca93d
+        );
+}
+
+.date-divider span:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            #dca93d,
+            transparent
+        );
+}
+
+.date-divider b {
+    color: #ffd15c;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.wedding-date {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #fff;
+}
+
+.wedding-date strong {
+    font-family: Georgia, serif;
+
+    font-size: 56px;
+
+    line-height: 0.8;
+
+    font-weight: 400;
+
+    color: #f6cb61;
+}
+
+.wedding-date div {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.wedding-date span {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: #fff2cf;
+}
+
+.wedding-date small {
+    margin-top: 4px;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #e4bd62;
+}
+
+
+.weekday {
+    margin-top: 14px;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #f8d47c;
+}
+
+
+.invitation-message {
+    max-width: 230px;
+
+    margin: 20px auto 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    font-style: italic;
+
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+.bottom-ornament {
+    margin-top: 18px;
+
+    letter-spacing: 8px;
+
+    color: #dca93d;
+}
+
+
+/* =========================================================
+   SCRATCH AREA
+========================================================= */
+
+.scratch-area {
+    position: absolute;
+
+    inset: 5px;
+
+    z-index: 20;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b77915,
+            #f6d878 20%,
+            #c99429 40%,
+            #ffe89a 60%,
+            #a9670d 85%,
+            #e4b54e
+        );
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
+
+
+/* =========================================================
+   CANVAS
+========================================================= */
+
+#scratchCanvas {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    z-index: 2;
+
+    cursor: grab;
+
+    touch-action: none;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+#scratchCanvas:active {
+    cursor: grabbing;
+}
+
+.scratch-area {
+    position: absolute;
+    inset: 5px;
+
+    z-index: 20;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+}
+
+.scratch-area.revealed {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.7s ease,
+        visibility 0.7s ease;
+}
+
+
+/* =========================================================
+   SCRATCH HINT
+========================================================= */
+
+.scratch-hint {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 5;
+
+    pointer-events: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #4b2500;
+
+    text-align: center;
+
+    text-shadow:
+        0 1px rgba(255, 255, 255, 0.6);
+}
+
+.scratch-hint .finger-icon {
+    font-size: 38px;
+
+    animation:
+        fingerMove 1.4s ease-in-out infinite;
+}
+
+.scratch-hint strong {
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+}
+
+.scratch-hint small {
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    opacity: 0.8;
+}
+
+@keyframes fingerMove {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+
+/* =========================================================
+   REVEALED CARD
+========================================================= */
+
+.scratch-area.revealed {
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD CORNERS
+========================================================= */
+
+.corner {
+    position: absolute;
+
+    z-index: 5;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    color: #d7a83e;
+
+    pointer-events: none;
+}
+
+.corner-tl {
+    top: 20px;
+    left: 22px;
+}
+
+.corner-tr {
+    top: 20px;
+    right: 22px;
+
+    transform: scaleX(-1);
+}
+
+.corner-bl {
+    bottom: 20px;
+    left: 22px;
+
+    transform: scaleY(-1);
+}
+
+.corner-br {
+    bottom: 20px;
+    right: 22px;
+
+    transform: scale(-1);
+}
+
+
+/* =========================================================
+   FLOATING RINGS
+========================================================= */
+
+.floating-ring {
+    position: absolute;
+
+    border: 1px solid rgba(255, 218, 125, 0.35);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.ring-1 {
+    width: 100px;
+    height: 100px;
+
+    left: -50px;
+    top: 20%;
+
+    animation:
+        ringFloat 6s ease-in-out infinite;
+}
+
+.ring-2 {
+    width: 70px;
+    height: 70px;
+
+    right: -35px;
+    top: 50%;
+
+    animation:
+        ringFloat 7s ease-in-out infinite reverse;
+}
+
+.ring-3 {
+    width: 45px;
+    height: 45px;
+
+    left: 15%;
+    bottom: -20px;
+
+    animation:
+        ringFloat 5s ease-in-out infinite;
+}
+
+@keyframes ringFloat {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(180deg);
+    }
+}
+
+
+/* =========================================================
+   REVEAL MESSAGE
+========================================================= */
+
+.reveal-message {
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal-message.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.reveal-message p {
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    font-style: italic;
+
+    color: #ffe4a1;
+}
+
+.reveal-message span {
+    color: #ffd05c;
+
+    animation:
+        sparkle 1.2s infinite alternate;
+}
+
+@keyframes sparkle {
+    from {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   COUNTDOWN
+========================================================= */
+
+.countdown-container {
+    margin-top: 45px;
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+.countdown-container.countdown-visible {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+}
+
+
+.countdown-title {
+    margin-bottom: 20px;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #f4d17b;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+.countdown-title span {
+    color: #ffcf55;
+}
+
+
+/* =========================================================
+   COUNTDOWN BOXES
+========================================================= */
+
+.countdown {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.count-box {
+    width: 90px;
+    height: 85px;
+
+    border: 1px solid rgba(255, 211, 105, 0.5);
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.12),
+            rgba(255, 255, 255, 0.04)
+        );
+
+    backdrop-filter: blur(10px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.count-box span {
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    color: #ffe7a0;
+}
+
+.count-box small {
+    margin-top: 3px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.count-separator {
+    color: #e9bd55;
+
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.save-date-actions {
+    margin-top: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.save-date-actions.buttons-visible {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+}
+
+
+.wedding-btn {
+    border: 1px solid rgba(255, 216, 115, 0.7);
+
+    padding: 13px 22px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 210, 80, 0.2),
+            rgba(255, 255, 255, 0.08)
+        );
+
+    color: #ffe7a3;
+
+    font-size: 12px;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.wedding-btn span {
+    margin-right: 5px;
+
+    font-size: 15px;
+}
+
+.wedding-btn:hover {
+    transform: translateY(-4px);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 210, 80, 0.35),
+            rgba(255, 255, 255, 0.15)
+        );
+
+    box-shadow:
+        0 10px 25px rgba(255, 190, 50, 0.2);
+}
+
+.wedding-btn:active {
+    transform: translateY(0) scale(0.97);
+}
+
+
+/* =========================================================
+   LOVE COUNTER
+========================================================= */
+
+.love-counter {
+    margin-top: 18px;
+
+    opacity: 0;
+
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.love-counter.counter-visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.love-counter span:first-child {
+    color: #ff6b9c;
+
+    margin-right: 5px;
+}
+
+
+/* =========================================================
+   PETALS
+========================================================= */
+
+.petal {
+    position: absolute;
+
+    z-index: 1;
+
+    color: rgba(255, 205, 100, 0.4);
+
+    font-size: 25px;
+
+    pointer-events: none;
+
+    animation:
+        petalFloat 8s ease-in-out infinite;
+}
+
+.petal-1 {
+    left: 8%;
+    top: 20%;
+}
+
+.petal-2 {
+    right: 10%;
+    top: 30%;
+
+    animation-delay: 1s;
+}
+
+.petal-3 {
+    left: 12%;
+    bottom: 20%;
+
+    animation-delay: 2s;
+}
+
+.petal-4 {
+    right: 8%;
+    bottom: 15%;
+
+    animation-delay: 3s;
+}
+
+@keyframes petalFloat {
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-30px)
+            rotate(180deg);
+    }
+}
+
+
+/* =========================================================
+   SPARKLES
+========================================================= */
+
+.sparkles {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.sparkle {
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #ffd967;
+
+    box-shadow:
+        0 0 10px #ffd967;
+
+    animation:
+        sparkleFloat 3s ease-in-out infinite;
+}
+
+@keyframes sparkleFloat {
+    0%,
+    100% {
+        opacity: 0.1;
+        transform: scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+
+/* =========================================================
+   CELEBRATION
+========================================================= */
+
+/* =========================================
+   CELEBRATION LAYER
+========================================= */
+
+#celebrationLayer {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 999999;
+
+    opacity: 1;
+}
+
+
+/* =========================================
+   CONFETTI
+========================================= */
+
+.confetti-piece {
+    position: absolute;
+
+    display: block;
+
+    border-radius: 2px;
+
+    opacity: 0;
+
+    animation-name: confettiFall;
+    animation-timing-function: cubic-bezier(.15,.75,.35,1);
+    animation-fill-mode: forwards;
+
+    will-change: transform, top, opacity;
+}
+
+
+@keyframes confettiFall {
+
+    0% {
+        opacity: 1;
+
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            )
+            rotate(0deg);
+    }
+
+    25% {
+
+        opacity: 1;
+
+        transform:
+            translate3d(
+                calc((var(--random-x, 0) * 1px)),
+                25vh,
+                0
+            )
+            rotate(180deg);
+    }
+
+    50% {
+
+        transform:
+            translate3d(
+                calc((var(--random-x, 0) * -1px)),
+                50vh,
+                0
+            )
+            rotate(360deg);
+    }
+
+    75% {
+
+        transform:
+            translate3d(
+                calc((var(--random-x, 0) * 1px)),
+                75vh,
+                0
+            )
+            rotate(540deg);
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate3d(
+                calc((var(--random-x, 0) * -1px)),
+                110vh,
+                0
+            )
+            rotate(720deg);
+    }
+}
+
+
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+.celebration-heart {
+
+    position: absolute;
+
+    color: #ff4d8d;
+
+    text-shadow:
+        0 0 10px rgba(255, 77, 141, .7),
+        0 0 25px rgba(255, 77, 141, .4);
+
+    opacity: 0;
+
+    animation:
+        heartFloat 4s ease-out forwards;
+
+}
+
+
+@keyframes heartFloat {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(40px)
+            scale(.4)
+            rotate(-15deg);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+
+        transform:
+            translateY(-180px)
+            scale(1.1)
+            rotate(15deg);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translateY(-350px)
+            scale(.7)
+            rotate(-10deg);
+    }
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.wedding-btn:focus-visible {
+    outline: 2px solid #ffd86c;
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .save-date-section {
+        padding:
+            70px
+            15px
+            90px;
+    }
+
+    .invitation-card {
+        min-height: 430px;
+    }
+
+    .save-date-content {
+        min-height: 420px;
+
+        padding:
+            40px
+            20px
+            26px;
+    }
+
+    .wedding-date strong {
+        font-size: 50px;
+    }
+
+    .count-box {
+        width: 65px;
+        height: 65px;
+    }
+
+    .count-box span {
+        font-size: 23px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .save-date-title {
+        font-size: 45px;
+    }
+
+    .save-date-intro {
+        margin-bottom: 30px;
+    }
+
+    .invitation-card {
+        width: 78vw;
+
+        min-height: 400px;
+
+        border-radius: 20px;
+    }
+
+    .save-date-content {
+        min-height: 390px;
+
+        padding:
+            32px
+            16px
+            22px;
+    }
+
+    .small-text {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+    .save-date-content h1 {
+        font-size: 30px;
+    }
+
+    .couple-name {
+        font-size: 17px;
+
+        gap: 8px;
+    }
+
+    .wedding-date strong {
+        font-size: 46px;
+    }
+
+    .wedding-date span {
+        font-size: 11px;
+
+        letter-spacing: 2px;
+    }
+
+    .wedding-date small {
+        font-size: 10px;
+    }
+
+    .invitation-message {
+        font-size: 11px;
+
+        max-width: 220px;
+    }
+
+    .scratch-hint strong {
+        font-size: 16px;
+    }
+
+    .countdown {
+        gap: 5px;
+    }
+
+    .count-box {
+        width: 58px;
+
+        height: 60px;
+
+        border-radius: 12px;
+    }
+
+    .count-box span {
+        font-size: 20px;
+    }
+
+    .count-box small {
+        font-size: 7px;
+
+        letter-spacing: 1px;
+    }
+
+    .count-separator {
+        font-size: 18px;
+    }
+
+    .save-date-actions {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .wedding-btn {
+        width: 220px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .invitation-card {
+        width: 82vw;
+
+        min-height: 370px;
+    }
+
+    .save-date-content {
+        min-height: 360px;
+    }
+
+    .count-box {
+        width: 50px;
+        height: 55px;
+    }
+
+    .count-box span {
+        font-size: 18px;
+    }
+
+    .count-box small {
+        font-size: 6px;
+    }
+
+    .count-separator {
+        font-size: 14px;
+    }
+
+    .wedding-date strong {
+        font-size: 40px;
+    }
+
+    .wedding-date span {
+        font-size: 10px;
+    }
+
+    .save-date-content h1 {
+        font-size: 27px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+}
+/* =========================================================
+   ELEGANT WEDDING CELEBRATION
+   ========================================================= */
+
+#celebrationLayer {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 999999;
+
+    opacity: 0;
+
+    visibility: hidden;
+}
+
+
+#celebrationLayer.active {
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* =========================================================
+   CONFETTI
+   ========================================================= */
+
+.wedding-confetti {
+
+    position: absolute;
+
+    display: block;
+
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.2)
+        rotate(0deg);
+
+    animation:
+        elegantConfetti
+        ease-out
+        forwards;
+
+    will-change:
+        transform,
+        opacity;
+}
+
+
+@keyframes elegantConfetti {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.2)
+            rotate(0deg);
+    }
+
+
+    8% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1)
+            rotate(80deg);
+    }
+
+
+    35% {
+
+        opacity: 1;
+
+        transform:
+            translate(
+                calc(-50% + var(--x) * 0.65),
+                calc(-50% + var(--y) * 0.65)
+            )
+            rotate(var(--rotate));
+    }
+
+
+    65% {
+
+        opacity: 0.9;
+
+        transform:
+            translate(
+                calc(-50% + var(--x)),
+                calc(-50% + var(--y) + 70px)
+            )
+            rotate(var(--rotate));
+    }
+
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                calc(-50% + var(--x)),
+                calc(-50% + var(--y) + 180px)
+            )
+            rotate(var(--rotate))
+            scale(0.7);
+    }
+}
+
+
+/* =========================================================
+   GOLD SPARKLES
+   ========================================================= */
+
+.wedding-sparkle {
+
+    position: absolute;
+
+    color: #D4AF37;
+
+    font-size: 13px;
+
+    opacity: 0;
+
+    text-shadow:
+        0 0 5px rgba(212,175,55,0.8),
+        0 0 15px rgba(212,175,55,0.5);
+
+    animation:
+        elegantSparkle
+        2.5s
+        ease-out
+        forwards;
+
+    will-change:
+        transform,
+        opacity;
+}
+
+
+@keyframes elegantSparkle {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(0,0)
+            scale(0)
+            rotate(0deg);
+    }
+
+
+    25% {
+
+        opacity: 1;
+
+        transform:
+            translate(
+                calc(var(--spark-x) * 0.35),
+                calc(var(--spark-y) * 0.35)
+            )
+            scale(1.2)
+            rotate(90deg);
+    }
+
+
+    60% {
+
+        opacity: 0.8;
+
+        transform:
+            translate(
+                calc(var(--spark-x) * 0.7),
+                calc(var(--spark-y) * 0.7)
+            )
+            scale(0.8)
+            rotate(180deg);
+    }
+
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                var(--spark-x),
+                var(--spark-y)
+            )
+            scale(0)
+            rotate(360deg);
+    }
+}
+/* =========================================
+   SEND LOVE BUTTON
+========================================= */
+
+.love-btn {
+    position: relative;
+    overflow: visible;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.love-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Button click animation */
+
+.love-btn.love-clicked {
+    animation: loveButtonPulse 0.55s ease;
+}
+
+@keyframes loveButtonPulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    35% {
+        transform: scale(1.12);
+    }
+
+    65% {
+        transform: scale(0.96);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+.floating-love-heart {
+
+    position: fixed;
+
+    z-index: 1000000;
+
+    pointer-events: none;
+
+    font-size: 22px;
+
+    color: #d88b8b;
+
+    transform: translate(-50%, -50%);
+
+    animation:
+        floatingHeart 1.2s ease-out forwards;
+}
+
+
+@keyframes floatingHeart {
+
+    0% {
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.5)
+            rotate(0deg);
+    }
+
+    30% {
+        opacity: 1;
+
+        transform:
+            translate(
+                calc(-50% + var(--x) * 0.3),
+                calc(-50% + var(--y) * 0.3)
+            )
+            scale(1.1)
+            rotate(var(--rotate));
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translate(
+                calc(-50% + var(--x)),
+                calc(-50% + var(--y))
+            )
+            scale(0.7)
+            rotate(var(--rotate));
+    }
+}
+
+
+/* =========================================
+   BIG HEART BURST
+========================================= */
+
+.heart-burst {
+    position: fixed;
+    z-index: 1000001;
+
+    pointer-events: none;
+
+    color: #e53935;
+
+    font-size: var(--size);
+
+    left: 0;
+    top: 0;
+
+    transform: translate(-50%, -50%);
+
+    animation: redHeartBurst 1s cubic-bezier(.2,.8,.3,1) forwards;
+}
+
+@keyframes redHeartBurst {
+
+    0% {
+        opacity: 0;
+        transform:
+            translate(-50%, -50%)
+            scale(0);
+    }
+
+    15% {
+        opacity: 1;
+        transform:
+            translate(-50%, -50%)
+            scale(1.4);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translate(
+                calc(-50% + var(--x)),
+                calc(-50% + var(--y))
+            )
+            scale(0.5)
+            rotate(var(--rotate));
+    }
+}
+.love-btn span {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* After clicking */
+.love-btn.love-active span {
+    color: #e53935;
+    transform: scale(1.25);
+}

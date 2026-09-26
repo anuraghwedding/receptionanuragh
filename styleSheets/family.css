@@ -1,0 +1,1474 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.family-section {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    padding: 100px 5% 120px;
+
+    color: #4c3932;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 25%,
+            rgba(190, 105, 95, .15),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 85% 35%,
+            rgba(211, 168, 85, .18),
+            transparent 27%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(152, 72, 82, .10),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fff9ef,
+            #f8e5d4 45%,
+            #fff3df
+        );
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.family-bg-glow {
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    pointer-events: none;
+
+    z-index: -2;
+}
+
+.glow-left {
+
+    left: -250px;
+    top: 35%;
+
+    background:
+        rgba(165, 67, 81, .16);
+}
+
+.glow-right {
+
+    right: -250px;
+    top: 45%;
+
+    background:
+        rgba(214, 171, 84, .17);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.family-heading {
+
+    position: relative;
+
+    z-index: 10;
+
+    max-width: 700px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+.family-heading-ornament {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+}
+
+.family-heading-ornament span {
+
+    width: 65px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #b58d4b,
+            transparent
+        );
+}
+
+.family-heading-ornament i {
+
+    color: #963d4e;
+
+    font-style: normal;
+
+    font-size: 18px;
+}
+
+.family-eyebrow {
+
+    margin: 0 0 12px;
+
+    color: #a17b43;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+.family-heading h1 {
+
+    margin: 0;
+
+    color: #503a32;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        clamp(55px, 7vw, 78px);
+
+    font-weight: 500;
+
+    line-height: .9;
+}
+
+.family-heading h1 em {
+
+    color: #963e50;
+
+    font-style: italic;
+}
+
+.family-subtitle {
+
+    max-width: 450px;
+
+    margin: 22px auto 0;
+
+    color: #796a62;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 300;
+
+    letter-spacing: .5px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   JOURNEY
+========================================================= */
+
+.family-journey {
+
+    position: relative;
+
+    width: min(1250px, 100%);
+
+    min-height: 1250px;
+
+    margin: auto;
+}
+
+
+/* =========================================================
+   DECORATIVE VINES
+========================================================= */
+
+.family-vines {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 900px;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    overflow: visible;
+}
+
+.vine-path {
+
+    fill: none;
+
+    stroke:
+        url(#vineGold);
+
+    stroke-width: 4;
+
+    stroke-linecap: round;
+
+    opacity: .34;
+}
+
+
+/* =========================================================
+   FAMILY FEATURE
+========================================================= */
+
+.family-feature {
+
+    position: absolute;
+
+    width: 47%;
+
+    z-index: 3;
+
+    text-align: center;
+}
+
+.family-feature-bride {
+
+    top: 40px;
+
+    left: 0;
+}
+
+.family-feature-groom {
+
+    top: 390px;
+
+    right: 0;
+}
+
+
+/* =========================================================
+   FEATURE HEADING
+========================================================= */
+
+.feature-heading {
+
+    margin-bottom: 20px;
+}
+
+.feature-small {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #a27d46;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 7px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+.feature-heading h2 {
+
+    margin: 0;
+
+    color: #913c4e;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 35px;
+
+    font-weight: 600;
+
+    line-height: 1;
+}
+
+.feature-line {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+.feature-line span {
+
+    width: 32px;
+
+    height: 1px;
+
+    background: #b8975b;
+}
+
+.feature-line i {
+
+    color: #a27c42;
+
+    font-size: 9px;
+
+    font-style: normal;
+}
+
+
+/* =========================================================
+   FAMILY ART
+========================================================= */
+
+.family-art {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    text-align: center;
+}
+
+.art-shadow {
+
+    position: absolute;
+
+    left: 8%;
+
+    right: 8%;
+
+    bottom: -18px;
+
+    height: 35px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(75, 48, 39, .20);
+
+    filter: blur(18px);
+
+    transition:
+        transform .7s ease,
+        opacity .7s ease;
+}
+
+.art-frame {
+
+    position: relative;
+
+    padding: 10px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf5,
+            #ead3a7,
+            #fff8e8
+        );
+
+    border:
+        1px solid #b89252;
+
+    box-shadow:
+
+        0 15px 30px
+        rgba(77, 49, 39, .10),
+
+        0 35px 70px
+        rgba(77, 49, 39, .12);
+
+    transform:
+        perspective(1200px)
+        rotateX(0deg);
+
+    transition:
+        transform .8s
+        cubic-bezier(.2,.8,.2,1),
+
+        box-shadow .8s ease;
+}
+
+.family-art:hover .art-frame {
+
+    transform:
+        perspective(1200px)
+        rotateX(2deg)
+        translateY(-8px)
+        scale(1.015);
+
+    box-shadow:
+
+        0 25px 40px
+        rgba(77, 49, 39, .13),
+
+        0 45px 90px
+        rgba(77, 49, 39, .18);
+}
+
+.family-art:hover .art-shadow {
+
+    transform: scale(.88);
+
+    opacity: .65;
+}
+
+.art-frame img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    background: #fff;
+
+    transition:
+        transform 1s
+        cubic-bezier(.2,.8,.2,1);
+}
+
+.family-art:hover .art-frame img {
+
+    transform: scale(1.025);
+}
+
+
+/* =========================================================
+   ART SHINE
+========================================================= */
+
+.art-shine {
+
+    position: absolute;
+
+    top: -20%;
+
+    left: -80%;
+
+    width: 45%;
+
+    height: 140%;
+
+    transform:
+        rotate(20deg);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.55),
+            transparent
+        );
+
+    transition:
+        left 1s ease;
+
+    pointer-events: none;
+}
+
+.family-art:hover .art-shine {
+
+    left: 140%;
+}
+
+
+/* =========================================================
+   CORNERS
+========================================================= */
+
+.corner {
+
+    position: absolute;
+
+    width: 26px;
+    height: 26px;
+
+    z-index: 5;
+
+    border:
+        1px solid #a47d42;
+
+    pointer-events: none;
+}
+
+.corner-tl {
+
+    top: 4px;
+    left: 4px;
+
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.corner-tr {
+
+    top: 4px;
+    right: 4px;
+
+    border-left: 0;
+    border-bottom: 0;
+}
+
+.corner-bl {
+
+    bottom: 4px;
+    left: 4px;
+
+    border-right: 0;
+    border-top: 0;
+}
+
+.corner-br {
+
+    bottom: 4px;
+    right: 4px;
+
+    border-left: 0;
+    border-top: 0;
+}
+
+
+/* =========================================================
+   EXPLORE
+========================================================= */
+
+.explore-label {
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 12px;
+
+    transform:
+        translateX(-50%)
+        translateY(15px);
+
+    opacity: 0;
+
+    color: #fff4df;
+
+    background:
+        rgba(65, 39, 34, .72);
+
+    border:
+        1px solid
+        rgba(225,190,123,.65);
+
+    border-radius: 30px;
+
+    transition:
+        opacity .4s ease,
+        transform .4s ease;
+
+    white-space: nowrap;
+}
+
+.family-art:hover .explore-label {
+
+    opacity: 1;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+.explore-label span {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid #e4bd77;
+
+    font-size: 13px;
+}
+
+.explore-label small {
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   CAPTION
+========================================================= */
+
+.feature-caption {
+
+    margin: 16px 0 0;
+
+    color: #87766d;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 17px;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   CENTRAL UNION
+========================================================= */
+
+.family-union {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 490px;
+
+    z-index: 8;
+
+    width: 190px;
+
+    text-align: center;
+
+    transform:
+        translateX(-50%);
+}
+
+.union-circle {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 115px;
+    height: 115px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #fffaf0,
+            #efd29d 70%,
+            #c69b57
+        );
+
+    border:
+        2px solid #ad8244;
+
+    box-shadow:
+
+        0 10px 25px
+        rgba(86,52,40,.18),
+
+        0 0 0 8px
+        rgba(255,244,220,.65),
+
+        0 0 0 9px
+        rgba(173,130,68,.22);
+}
+
+.union-heart {
+
+    color: #963d50;
+
+    font-size: 38px;
+
+    line-height: 1;
+
+    animation:
+        heartBeat 2.3s ease-in-out infinite;
+}
+
+.family-union p {
+
+    margin:
+        18px 0 2px;
+
+    color: #a07b43;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 7px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+.family-union strong {
+
+    color: #583e34;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   UNION PETALS
+========================================================= */
+
+.union-petal {
+
+    position: absolute;
+
+    width: 13px;
+    height: 7px;
+
+    border-radius:
+        100% 0 100% 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #bd5a69,
+            #e9a0a1
+        );
+
+    opacity: .55;
+}
+
+.petal-a {
+
+    left: 8px;
+    top: 35px;
+
+    transform: rotate(-35deg);
+}
+
+.petal-b {
+
+    right: 8px;
+    top: 40px;
+
+    transform: rotate(35deg);
+}
+
+.petal-c {
+
+    left: 25px;
+    bottom: 25px;
+
+    transform: rotate(25deg);
+}
+
+.petal-d {
+
+    right: 25px;
+    bottom: 20px;
+
+    transform: rotate(-30deg);
+}
+
+
+/* =========================================================
+   CONCLUSION
+========================================================= */
+
+.family-conclusion {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 0;
+
+    width: 100%;
+
+    transform:
+        translateX(-50%);
+
+    text-align: center;
+}
+
+.conclusion-line {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 14px;
+}
+
+.conclusion-line span {
+
+    width: 55px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #b49256,
+            transparent
+        );
+}
+
+.conclusion-line i {
+
+    color: #963d50;
+
+    font-style: normal;
+}
+
+.family-conclusion > p {
+
+    margin: 0 0 7px;
+
+    color: #a07b43;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 7px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+.family-conclusion h3 {
+
+    margin: 0;
+
+    color: #513a32;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        clamp(38px, 5vw, 56px);
+
+    font-weight: 500;
+
+    line-height: .95;
+}
+
+.family-conclusion h3 em {
+
+    display: block;
+
+    color: #963e50;
+
+    font-style: italic;
+}
+
+.couple-names {
+
+    margin-top: 14px;
+
+    color: #8e3c4d;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 29px;
+
+    font-style: italic;
+}
+
+.couple-names span {
+
+    padding: 0 9px;
+
+    color: #ad874b;
+
+    font-style: normal;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.family-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background:
+        rgba(38,22,21,.94);
+
+    backdrop-filter:
+        blur(14px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity .4s ease,
+        visibility .4s ease;
+}
+
+.family-modal.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+.modal-content {
+
+    max-width: 1100px;
+
+    max-height: 94vh;
+
+    text-align: center;
+
+    transform:
+        translateY(25px)
+        scale(.94);
+
+    transition:
+        transform .55s
+        cubic-bezier(.2,.8,.2,1);
+}
+
+.family-modal.open .modal-content {
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+.modal-content > span {
+
+    color: #d7b26b;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+}
+
+.modal-content h2 {
+
+    margin: 5px 0 16px;
+
+    color: #fff1d7;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 40px;
+
+    font-weight: 500;
+}
+
+.modal-image {
+
+    max-width: 92vw;
+
+    max-height: 76vh;
+
+    padding: 7px;
+
+    background: #fff8ea;
+
+    border:
+        1px solid #c6a15e;
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.55);
+}
+
+.modal-image img {
+
+    display: block;
+
+    max-width: 90vw;
+
+    max-height: 74vh;
+
+    width: auto;
+
+    height: auto;
+
+    margin: auto;
+}
+
+.modal-content > p {
+
+    margin-top: 12px;
+
+    color:
+        rgba(255,235,204,.55);
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: 2px;
+}
+
+.modal-close {
+
+    position: absolute;
+
+    top: 22px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(222,183,108,.6);
+
+    background:
+        rgba(255,255,255,.08);
+
+    color: #ffe7c0;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.14);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .family-section {
+
+        padding:
+            80px 25px
+            100px;
+    }
+
+    .family-journey {
+
+        min-height: 1100px;
+    }
+
+    .family-feature {
+
+        width: 48%;
+    }
+
+    .family-feature-bride {
+
+        top: 30px;
+    }
+
+    .family-feature-groom {
+
+        top: 360px;
+    }
+
+    .feature-heading h2 {
+
+        font-size: 29px;
+    }
+
+    .family-union {
+
+        top: 455px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .family-section {
+
+        padding:
+            65px 14px
+            85px;
+    }
+
+    .family-heading {
+
+        margin-bottom: 35px;
+    }
+
+    .family-heading-ornament span {
+
+        width: 40px;
+    }
+
+    .family-eyebrow {
+
+        font-size: 7px;
+
+        letter-spacing: 2px;
+    }
+
+    .family-heading h1 {
+
+        font-size: 50px;
+    }
+
+    .family-subtitle {
+
+        font-size: 10px;
+
+        padding: 0 15px;
+    }
+
+
+    /* =========================================
+       MOBILE STORY
+    ========================================= */
+
+    .family-journey {
+
+        min-height: 130vh;
+
+        width: 100%;
+    }
+
+
+    /* =========================================
+       VINES
+    ========================================= */
+
+    .family-vines {
+
+        height: 1250px;
+
+        width: 100%;
+
+        opacity: .65;
+    }
+
+    .vine-path {
+
+        stroke-width: 3;
+
+        opacity: .25;
+    }
+
+
+    /* =========================================
+       FAMILY 1
+    ========================================= */
+
+    .family-feature {
+
+        width: 94%;
+
+        left: 3%;
+
+        right: auto;
+    }
+
+    .family-feature-bride {
+
+        top: 20px;
+    }
+
+
+    /* =========================================
+       UNION
+    ========================================= */
+
+    .family-union {
+
+        top: 470px;
+
+        width: 150px;
+    }
+
+    .union-circle {
+
+        width: 92px;
+        height: 92px;
+    }
+
+    .union-heart {
+
+        font-size: 30px;
+    }
+
+    .family-union p {
+
+        margin-top: 15px;
+    }
+
+    .family-union strong {
+
+        font-size: 22px;
+    }
+
+
+    /* =========================================
+       FAMILY 2
+    ========================================= */
+
+    .family-feature-groom {
+
+        top: 630px;
+    }
+
+
+    /* =========================================
+       HEADINGS
+    ========================================= */
+
+    .feature-heading h2 {
+
+        font-size: 29px;
+    }
+
+    .feature-caption {
+
+        font-size: 16px;
+
+        margin-top: 12px;
+    }
+
+
+    /* =========================================
+       CONCLUSION
+    ========================================= */
+
+    .family-conclusion {
+
+        bottom: 0;
+    }
+
+    .family-conclusion h3 {
+
+        font-size: 36px;
+    }
+
+    .couple-names {
+
+        font-size: 27px;
+    }
+
+
+    /* =========================================
+       MODAL
+    ========================================= */
+
+    .family-modal {
+
+        padding: 8px;
+    }
+
+    .modal-content {
+
+        width: 95vw;
+    }
+
+    .modal-content h2 {
+
+        font-size: 29px;
+    }
+
+    .modal-image {
+
+        max-width: 92vw;
+
+        max-height: 76vh;
+
+        padding: 4px;
+    }
+
+    .modal-image img {
+
+        max-width: 90vw;
+
+        max-height: 73vh;
+    }
+
+    .modal-close {
+
+        top: 10px;
+        right: 10px;
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 24px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .family-heading h1 {
+
+        font-size: 45px;
+    }
+
+    .family-journey {
+
+        min-height: 1430px;
+    }
+
+    .family-feature-groom {
+
+        top: 650px;
+    }
+
+    .family-union {
+
+        top: 510px;
+    }
+
+    .feature-heading h2 {
+
+        font-size: 26px;
+    }
+
+    .family-conclusion h3 {
+
+        font-size: 31px;
+    }
+}
