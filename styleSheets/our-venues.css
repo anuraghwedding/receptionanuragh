@@ -1,178 +1,186 @@
 /* ============================================================
-   ECO PARK — LUXURY EDITORIAL VENUE PAGE
-   COMPLETELY NEW DESIGN
-   ============================================================ */
-
-
-/* ============================================================
-   ROOT PAGE
+   TOWN HALL — LUXURY WEDDING VENUE
+   ANUSUA & RAGHVENDRA
    ============================================================ */
 
 .ep-page {
+    --green: #102f29;
+    --green-2: #173e35;
+    --green-3: #225248;
 
-    --ep-green: #183c35;
-    --ep-green-dark: #102d28;
-    --ep-green-light: #28554b;
+    --cream: #fbf4e7;
+    --cream-soft: #eadfca;
 
-    --ep-cream: #f7efe1;
-    --ep-paper: #fbf5e9;
+    --gold: #c9a45c;
+    --gold-light: #e7ce91;
+    --gold-soft: rgba(201, 164, 92, .35);
 
-    --ep-gold: #c6a56a;
-    --ep-gold-light: #e1c990;
-
-    --ep-red: #8d3047;
+    --red: #7f2e40;
 
     position: relative;
-
     min-height: 100vh;
-
     overflow: hidden;
 
-    padding:
-        35px 6vw 90px;
+    padding: 30px 5vw 90px;
 
     background:
         radial-gradient(
-            circle at 15% 25%,
-            rgba(198,165,106,.09),
+            circle at 15% 15%,
+            rgba(201,164,92,.12),
             transparent 25%
         ),
         radial-gradient(
-            circle at 85% 75%,
-            rgba(198,165,106,.07),
-            transparent 30%
+            circle at 90% 70%,
+            rgba(201,164,92,.08),
+            transparent 28%
         ),
-        var(--ep-green);
+        linear-gradient(
+            135deg,
+            var(--green),
+            #0c2722 70%
+        );
 
-    color: var(--ep-cream);
+    color: var(--cream);
 
     isolation: isolate;
 }
 
 
 /* ============================================================
-   SUBTLE TEXTURE
+   BACKGROUND GLOW
    ============================================================ */
 
 .ep-page::before {
-
     content: "";
 
     position: absolute;
-
     inset: 0;
 
     background:
         linear-gradient(
-            135deg,
-            transparent 40%,
-            rgba(255,255,255,.018) 40%,
-            transparent 41%
+            120deg,
+            transparent 0%,
+            rgba(255,255,255,.018) 50%,
+            transparent 100%
         );
-
-    background-size:
-        10px 10px;
-
-    opacity: .35;
 
     pointer-events: none;
 
-    z-index: -1;
+    z-index: -3;
 }
 
 
 /* ============================================================
-   GIANT ECO BACKGROUND WORD
+   BACKGROUND GRAIN
+   ============================================================ */
+
+.ep-page::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(
+            rgba(255,255,255,.09) .6px,
+            transparent .6px
+        );
+
+    background-size: 7px 7px;
+
+    opacity: .07;
+
+    pointer-events: none;
+
+    z-index: -2;
+}
+
+
+/* ============================================================
+   GIANT BACKGROUND WORD
    ============================================================ */
 
 .ep-bg-word {
-
     position: absolute;
 
-    top: 4%;
-
-    right: -3%;
+    top: 6%;
+    right: -5%;
 
     font-family:
         "Cormorant Garamond",
+        Georgia,
         serif;
 
     font-size:
-        clamp(180px, 31vw, 480px);
+        clamp(180px, 30vw, 500px);
 
     line-height: .75;
 
-    font-weight: 600;
+    font-weight: 500;
 
     letter-spacing: -20px;
 
-    color:
-        rgba(255,255,255,.025);
+    color: rgba(255,255,255,.025);
 
     pointer-events: none;
-
     user-select: none;
 
     z-index: -1;
+
+    transform: rotate(-4deg);
 }
 
 
 /* ============================================================
-   BOTANICAL DECORATION
+   BOTANICAL SYMBOLS
    ============================================================ */
 
 .ep-leaf {
-
     position: absolute;
 
     font-family:
         "Cormorant Garamond",
         serif;
 
-    color:
-        rgba(198,165,106,.24);
+    color: rgba(201,164,92,.20);
 
     pointer-events: none;
 
     z-index: -1;
-}
 
+    filter: blur(.2px);
+}
 
 .ep-leaf-one {
+    left: -70px;
+    top: 18%;
 
-    left: -45px;
-    top: 15%;
-
-    font-size: 230px;
+    font-size: 240px;
 
     transform:
-        rotate(-35deg);
+        rotate(-38deg);
 }
-
 
 .ep-leaf-two {
+    right: -80px;
+    bottom: 10%;
 
-    right: -65px;
-    bottom: 12%;
-
-    font-size: 280px;
+    font-size: 300px;
 
     transform:
-        rotate(145deg);
+        rotate(140deg);
 }
 
-
 .ep-leaf-three {
+    left: 44%;
+    bottom: -120px;
 
-    left: 42%;
-    bottom: -100px;
+    font-size: 210px;
 
-    font-size: 200px;
+    opacity: .4;
 
     transform:
         rotate(20deg);
-
-    opacity: .5;
 }
 
 
@@ -181,10 +189,8 @@
    ============================================================ */
 
 .ep-topbar {
-
     position: relative;
-
-    z-index: 5;
+    z-index: 10;
 
     display: grid;
 
@@ -197,43 +203,45 @@
 
     gap: 20px;
 
-    max-width: 1400px;
+    max-width: 1350px;
 
     margin: 0 auto;
 
-    padding-bottom: 22px;
+    padding:
+        5px 0 22px;
 
     border-bottom:
         1px solid
-        rgba(198,165,106,.30);
+        rgba(201,164,92,.35);
 
     font-family:
         "Montserrat",
+        Arial,
         sans-serif;
 
-    font-size: 7px;
+    font-size: 8px;
+
+    font-weight: 500;
 
     letter-spacing: 3px;
 
     color:
-        rgba(247,239,225,.65);
+        rgba(251,244,231,.62);
 }
 
-
 .ep-top-center {
+    color: var(--gold-light);
 
-    color:
-        var(--ep-gold-light);
-
-    letter-spacing: 4px;
+    letter-spacing: 5px;
 
     text-align: center;
 }
 
-
 .ep-top-date {
-
     text-align: right;
+
+    color:
+        rgba(251,244,231,.5);
 }
 
 
@@ -242,7 +250,6 @@
    ============================================================ */
 
 .ep-hero {
-
     position: relative;
 
     z-index: 2;
@@ -250,13 +257,13 @@
     display: grid;
 
     grid-template-columns:
-        43% 57%;
+        44% 56%;
 
     align-items: center;
 
     max-width: 1400px;
 
-    min-height: 720px;
+    min-height: 710px;
 
     margin: 0 auto;
 }
@@ -267,87 +274,74 @@
    ============================================================ */
 
 .ep-content {
-
     position: relative;
 
-    z-index: 5;
+    z-index: 8;
 
     padding:
-        80px 0 50px 5%;
+        75px 0 55px 5%;
+
+    opacity: 0;
+
+    transform:
+        translateX(-35px);
+
+    transition:
+        opacity 1s ease .2s,
+        transform 1s cubic-bezier(.22,1,.36,1) .2s;
+}
+
+
+/* Activated by your existing JS */
+.ep-page.ep-loaded .ep-content {
+    opacity: 1;
+
+    transform:
+        translateX(0);
 }
 
 
 /* ============================================================
-   NUMBER
-   ============================================================ */
-
-.ep-number {
-
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    width: 68px;
-    height: 68px;
-
-    margin-bottom: 28px;
-
-    border:
-        1px solid
-        var(--ep-gold);
-
-    border-radius: 50%;
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size: 27px;
-
-    color:
-        var(--ep-gold-light);
-}
-
-
-.ep-number::after {
-
-    content: "";
-
-    position: absolute;
-
-    inset: 6px;
-
-    border:
-        1px solid
-        rgba(198,165,106,.35);
-
-    border-radius: 50%;
-}
-
-
-/* ============================================================
-   SMALL TITLE
+   SMALL HEADING
    ============================================================ */
 
 .ep-small-title {
+    position: relative;
 
-    margin-bottom: 15px;
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 22px;
 
     font-family:
         "Montserrat",
+        Arial,
         sans-serif;
 
-    font-size: 8px;
+    font-size: 9px;
 
     font-weight: 600;
 
     letter-spacing: 4px;
 
-    color:
-        var(--ep-gold);
+    color: var(--gold-light);
+}
+
+.ep-small-title::before {
+    content: "";
+
+    width: 34px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold)
+        );
 }
 
 
@@ -356,83 +350,89 @@
    ============================================================ */
 
 .ep-title {
-
     margin: 0;
 
     font-family:
         "Cormorant Garamond",
+        Georgia,
         serif;
 
     font-size:
-        clamp(90px, 11vw, 155px);
+        clamp(95px, 11vw, 160px);
 
     font-weight: 400;
 
-    line-height: .65;
+    line-height: .62;
 
-    letter-spacing: -4px;
+    letter-spacing: -5px;
 
-    color:
-        var(--ep-cream);
+    color: var(--cream);
+
+    text-shadow:
+        0 15px 45px rgba(0,0,0,.18);
 }
 
-
 .ep-title span {
-
     display: block;
 
-    margin-left: 65px;
+    margin-left: 70px;
 
-    margin-top: 15px;
+    margin-top: 22px;
 
     font-family:
         "Parisienne",
         cursive;
 
     font-size:
-        clamp(75px, 9vw, 125px);
+        clamp(78px, 9vw, 130px);
+
+    font-weight: 400;
 
     letter-spacing: 0;
 
-    color:
-        var(--ep-gold-light);
+    color: var(--gold-light);
+
+    text-shadow:
+        0 10px 30px rgba(0,0,0,.18);
 }
 
 
 /* ============================================================
-   LOCATION
+   LOCATION LINE
    ============================================================ */
 
 .ep-location-line {
-
     display: flex;
 
     align-items: center;
 
-    gap: 13px;
+    gap: 14px;
 
-    margin-top: 45px;
+    margin-top: 50px;
 
     font-family:
         "Montserrat",
+        Arial,
         sans-serif;
 
-    font-size: 7px;
+    font-size: 8px;
 
-    letter-spacing: 2.5px;
+    letter-spacing: 3px;
 
     color:
-        rgba(247,239,225,.65);
+        rgba(251,244,231,.63);
 }
 
-
 .ep-line {
-
-    width: 55px;
+    width: 65px;
     height: 1px;
 
     background:
-        var(--ep-gold);
+        linear-gradient(
+            90deg,
+            var(--gold),
+            transparent
+        );
 }
 
 
@@ -441,135 +441,26 @@
    ============================================================ */
 
 .ep-description {
-
-    max-width: 340px;
+    max-width: 355px;
 
     margin:
-        25px 0 35px;
+        25px 0 34px;
 
     font-family:
         "Montserrat",
+        Arial,
         sans-serif;
 
-    font-size: 9px;
+    font-size: 10px;
+
+    font-weight: 400;
 
     line-height: 2;
 
-    color:
-        rgba(247,239,225,.67);
-}
-
-
-/* ============================================================
-   EVENT LIST
-   ============================================================ */
-
-.ep-events {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 12px;
-
-    max-width: 390px;
-
-    padding:
-        22px 0;
-
-    border-top:
-        1px solid
-        rgba(198,165,106,.25);
-
-    border-bottom:
-        1px solid
-        rgba(198,165,106,.25);
-}
-
-
-/* ============================================================
-   EVENT
-   ============================================================ */
-
-.ep-event {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 11px;
-
-    padding: 8px 0;
-
-    transition:
-        transform .3s ease;
-}
-
-
-.ep-event:hover {
-
-    transform:
-        translateX(5px);
-}
-
-
-.ep-event-symbol {
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    width: 28px;
-    height: 28px;
-
-    border:
-        1px solid
-        rgba(198,165,106,.45);
-
-    border-radius: 50%;
+    letter-spacing: .3px;
 
     color:
-        var(--ep-gold-light);
-
-    font-size: 12px;
-}
-
-
-.ep-event strong {
-
-    display: block;
-
-    font-family:
-        "Montserrat",
-        sans-serif;
-
-    font-size: 7px;
-
-    letter-spacing: 1.5px;
-
-    color:
-        var(--ep-cream);
-}
-
-
-.ep-event small {
-
-    display: block;
-
-    margin-top: 4px;
-
-    font-family:
-        "Montserrat",
-        sans-serif;
-
-    font-size: 5px;
-
-    letter-spacing: 1px;
-
-    color:
-        rgba(247,239,225,.42);
+        rgba(251,244,231,.67);
 }
 
 
@@ -577,79 +468,108 @@
    LOCATION BUTTON
    ============================================================ */
 
-.ep-location-button {
+.venue-map {
+    position: relative;
 
     display: inline-flex;
 
     align-items: center;
 
-    gap: 13px;
+    gap: 15px;
 
-    margin-top: 30px;
+    margin-top: 8px;
 
     padding:
-        13px 20px;
+        15px 22px;
+
+    overflow: hidden;
 
     background:
-        var(--ep-gold);
+        linear-gradient(
+            135deg,
+            var(--gold),
+            #a98342
+        );
 
     color:
-        var(--ep-green-dark);
+        #102b25;
 
     text-decoration: none;
 
     font-family:
         "Montserrat",
+        Arial,
         sans-serif;
 
-    font-size: 7px;
+    font-size: 8px;
 
-    font-weight: 600;
+    font-weight: 700;
 
-    letter-spacing: 1.5px;
-
-    transition:
-        transform .35s ease,
-        background .35s ease,
-        box-shadow .35s ease;
-}
-
-
-.ep-location-button:hover {
-
-    transform:
-        translateY(-4px);
-
-    background:
-        var(--ep-gold-light);
+    letter-spacing: 2px;
 
     box-shadow:
-        0 12px 30px
-        rgba(0,0,0,.22);
+        0 15px 35px rgba(0,0,0,.20);
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
 }
 
+.venue-map::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.35),
+            transparent
+        );
+
+    transform: skewX(-25deg);
+
+    transition:
+        left .7s ease;
+}
+
+.venue-map:hover::before {
+    left: 140%;
+}
+
+.venue-map:hover {
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.32);
+}
 
 .ep-location-icon {
+    font-size: 17px;
 
-    font-size: 14px;
+    line-height: 1;
 }
 
-
-.ep-location-button b {
-
-    font-size: 14px;
+.venue-map b {
+    font-size: 17px;
 
     font-weight: 400;
 
     transition:
-        transform .3s ease;
+        transform .35s ease;
 }
 
-
-.ep-location-button:hover b {
-
+.venue-map:hover b {
     transform:
-        translateX(4px);
+        translateX(6px);
 }
 
 
@@ -658,10 +578,27 @@
    ============================================================ */
 
 .ep-visual {
-
     position: relative;
 
-    height: 680px;
+    height: 690px;
+
+    opacity: 0;
+
+    transform:
+        translateX(45px)
+        scale(.96);
+
+    transition:
+        opacity 1.1s ease .35s,
+        transform 1.2s cubic-bezier(.22,1,.36,1) .35s;
+}
+
+.ep-page.ep-loaded .ep-visual {
+    opacity: 1;
+
+    transform:
+        translateX(0)
+        scale(1);
 }
 
 
@@ -670,73 +607,92 @@
    ============================================================ */
 
 .ep-image-frame {
-
     position: absolute;
 
-    top: 30px;
-    right: 5%;
+    top: 35px;
+    right: 6%;
 
     width: 72%;
-    height: 610px;
+    height: 620px;
 
     overflow: hidden;
 
     border:
         1px solid
-        rgba(198,165,106,.65);
+        rgba(201,164,92,.7);
 
     border-radius:
-        48% 48% 0 0;
-
-    box-shadow:
-        -25px 30px 70px
-        rgba(0,0,0,.25);
+        50% 50% 12px 12px;
 
     background:
-        #27473f;
+        #1b433a;
 
     transform:
         rotate(2deg);
 
+    box-shadow:
+        -25px 30px 80px
+        rgba(0,0,0,.32);
+
     transition:
-        transform .9s ease,
+        transform .9s cubic-bezier(.22,1,.36,1),
         box-shadow .9s ease;
 }
 
+.ep-image-frame::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.16);
+
+    border-radius:
+        48% 48% 7px 7px;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
 
 .ep-visual:hover .ep-image-frame {
-
     transform:
         rotate(0deg)
+        translateY(-8px)
         scale(1.015);
 
     box-shadow:
-        -15px 35px 80px
-        rgba(0,0,0,.32);
+        -15px 40px 90px
+        rgba(0,0,0,.40);
 }
 
 
-.ep-image-frame img {
+/* ============================================================
+   IMAGE
+   ============================================================ */
 
+.ep-image-frame img {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
-
     display: block;
 
+    object-fit: cover;
+
     transform:
-        scale(1.04);
+        scale(1.06);
 
     transition:
-        transform 1.4s ease;
+        transform 1.5s
+        cubic-bezier(.22,1,.36,1);
 }
 
-
 .ep-visual:hover .ep-image-frame img {
-
     transform:
-        scale(1.09);
+        scale(1.13);
 }
 
 
@@ -745,17 +701,19 @@
    ============================================================ */
 
 .ep-image-overlay {
-
     position: absolute;
 
     inset: 0;
 
     background:
         linear-gradient(
-            to top,
-            rgba(10,30,26,.65),
-            transparent 55%
+            to bottom,
+            rgba(12,40,34,.05),
+            transparent 40%,
+            rgba(8,28,24,.75)
         );
+
+    z-index: 2;
 
     pointer-events: none;
 }
@@ -766,41 +724,57 @@
    ============================================================ */
 
 .ep-ring {
-
     position: absolute;
 
     border:
         1px solid
-        rgba(198,165,106,.35);
+        rgba(201,164,92,.32);
 
     border-radius: 50%;
 
     pointer-events: none;
 
     z-index: 1;
-}
 
+    animation:
+        epRingFloat 8s ease-in-out infinite;
+}
 
 .ep-ring-one {
-
-    width: 440px;
-    height: 440px;
+    width: 450px;
+    height: 450px;
 
     top: 120px;
-    right: -30px;
+    right: -35px;
 }
 
-
 .ep-ring-two {
+    width: 530px;
+    height: 530px;
 
-    width: 510px;
-    height: 510px;
-
-    top: 85px;
-    right: -65px;
+    top: 80px;
+    right: -75px;
 
     border-color:
-        rgba(198,165,106,.12);
+        rgba(201,164,92,.12);
+
+    animation-delay:
+        -2s;
+}
+
+@keyframes epRingFloat {
+    0%,
+    100% {
+        transform:
+            translate(0,0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translate(-8px,12px)
+            rotate(3deg);
+    }
 }
 
 
@@ -809,128 +783,119 @@
    ============================================================ */
 
 .ep-photo-label {
-
     position: absolute;
 
-    right: 9%;
-    bottom: 40px;
+    right: 10%;
+    bottom: 42px;
 
-    z-index: 5;
+    z-index: 6;
 
     display: flex;
 
     align-items: flex-end;
 
-    gap: 12px;
+    gap: 14px;
 }
 
-
 .ep-photo-label span {
-
     font-family:
         "Cormorant Garamond",
+        Georgia,
         serif;
 
-    font-size: 30px;
+    font-size: 32px;
+
+    font-weight: 500;
 
     letter-spacing: 3px;
 
-    color:
-        #fff;
+    color: #fff;
+
+    text-shadow:
+        0 4px 20px rgba(0,0,0,.4);
 }
 
-
 .ep-photo-label small {
-
-    padding-bottom: 6px;
+    padding-bottom: 7px;
 
     font-family:
         "Montserrat",
+        Arial,
         sans-serif;
 
-    font-size: 6px;
+    font-size: 7px;
 
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
 
-    color:
-        var(--ep-gold-light);
+    color: var(--gold-light);
 }
 
 
 /* ============================================================
-   FLOWER
+   DECORATIVE FLOWER
    ============================================================ */
 
 .ep-flower {
-
     position: absolute;
 
-    left: 8%;
-
+    left: 7%;
     bottom: 75px;
 
-    width: 100px;
-    height: 100px;
+    width: 105px;
+    height: 105px;
 
     z-index: 10;
 
     animation:
-        epFloat 5s ease-in-out infinite;
+        epFlowerFloat 5s ease-in-out infinite;
 }
-
 
 .ep-flower span,
 .ep-flower i,
 .ep-flower b {
-
     position: absolute;
 
     font-style: normal;
 
     color:
-        var(--ep-gold-light);
+        var(--gold-light);
+
+    text-shadow:
+        0 5px 20px rgba(201,164,92,.25);
 }
 
-
 .ep-flower span {
-
     top: 0;
     left: 42px;
 
-    font-size: 30px;
+    font-size: 31px;
 }
-
 
 .ep-flower i {
-
-    top: 37px;
+    top: 39px;
     left: 5px;
 
-    font-size: 20px;
+    font-size: 21px;
 }
-
 
 .ep-flower b {
+    right: 4px;
+    bottom: 4px;
 
-    bottom: 5px;
-    right: 5px;
-
-    font-size: 25px;
+    font-size: 26px;
 }
 
-
-@keyframes epFloat {
-
+@keyframes epFlowerFloat {
     0%,
     100% {
         transform:
             translateY(0)
-            rotate(0deg);
+            rotate(0);
     }
 
     50% {
         transform:
-            translateY(-12px)
+            translateY(-13px)
             rotate(8deg);
     }
 }
@@ -941,11 +906,9 @@
    ============================================================ */
 
 .ep-vertical-text {
-
     position: absolute;
 
     top: 50%;
-
     right: -2px;
 
     transform:
@@ -957,14 +920,17 @@
 
     font-family:
         "Montserrat",
+        Arial,
         sans-serif;
 
-    font-size: 6px;
+    font-size: 7px;
+
+    font-weight: 500;
 
     letter-spacing: 4px;
 
     color:
-        rgba(247,239,225,.38);
+        rgba(251,244,231,.4);
 
     white-space: nowrap;
 }
@@ -975,120 +941,116 @@
    ============================================================ */
 
 .ep-bottom {
-
     position: relative;
 
     z-index: 5;
 
-    max-width: 850px;
+    max-width: 900px;
 
     margin:
-        20px auto 0;
+        25px auto 0;
 
-    padding-top: 45px;
+    padding:
+        50px 20px 0;
 
     text-align: center;
 
     border-top:
         1px solid
-        rgba(198,165,106,.25);
+        rgba(201,164,92,.25);
 }
 
-
 .ep-bottom-line {
-
-    width: 8px;
-    height: 8px;
+    width: 11px;
+    height: 11px;
 
     margin:
-        -50px auto 25px;
+        -56px auto 25px;
 
     border:
         1px solid
-        var(--ep-gold);
+        var(--gold);
 
     transform:
         rotate(45deg);
 
     background:
-        var(--ep-green);
+        var(--green);
 }
 
-
 .ep-bottom p {
-
-    margin: 0 0 15px;
+    margin:
+        0 0 16px;
 
     font-family:
         "Montserrat",
+        Arial,
         sans-serif;
 
-    font-size: 7px;
+    font-size: 8px;
 
-    letter-spacing: 3px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
 
     color:
-        var(--ep-gold);
+        var(--gold);
 }
 
-
 .ep-bottom h2 {
-
     margin: 0;
 
     font-family:
         "Cormorant Garamond",
+        Georgia,
         serif;
 
     font-size:
-        clamp(35px, 5vw, 55px);
+        clamp(40px, 5vw, 62px);
 
     font-weight: 400;
 
-    color:
-        var(--ep-cream);
-}
+    line-height: 1;
 
+    color:
+        var(--cream);
+}
 
 .ep-bottom h2 span {
-
     font-family:
         "Parisienne",
         cursive;
 
     color:
-        var(--ep-gold-light);
+        var(--gold-light);
 }
-
 
 .ep-names {
-
-    margin-top: 20px;
+    margin-top: 22px;
 
     font-family:
         "Parisienne",
         cursive;
 
-    font-size: 30px;
+    font-size: 32px;
 
     color:
-        var(--ep-cream);
+        var(--cream);
 }
 
-
 .ep-names em {
-
     padding:
-        0 12px;
+        0 14px;
 
     font-family:
         "Cormorant Garamond",
+        Georgia,
         serif;
 
     font-style: normal;
 
     color:
-        var(--ep-gold);
+        var(--gold);
 }
 
 
@@ -1098,48 +1060,55 @@
 
 @media (max-width: 1000px) {
 
-    .ep-hero {
-
-        grid-template-columns:
-            48% 52%;
-
-        min-height: 650px;
+    .ep-page {
+        padding:
+            28px 4vw 75px;
     }
 
+    .ep-hero {
+        grid-template-columns:
+            47% 53%;
+
+        min-height:
+            650px;
+    }
 
     .ep-content {
-
-        padding-left: 2%;
+        padding-left:
+            2%;
     }
-
 
     .ep-title {
-
-        font-size: 100px;
+        font-size:
+            100px;
     }
-
 
     .ep-title span {
+        font-size:
+            84px;
 
-        font-size: 82px;
-
-        margin-left: 40px;
+        margin-left:
+            42px;
     }
 
-
     .ep-image-frame {
-
         width: 78%;
-
         height: 560px;
     }
 
-
     .ep-visual {
-
         height: 620px;
     }
 
+    .ep-ring-one {
+        width: 390px;
+        height: 390px;
+    }
+
+    .ep-ring-two {
+        width: 450px;
+        height: 450px;
+    }
 }
 
 
@@ -1150,300 +1119,336 @@
 @media (max-width: 700px) {
 
     .ep-page {
-
         padding:
-            22px 18px 70px;
+            20px 17px 65px;
     }
 
 
-    /* TOP BAR */
+    /* TOP */
 
     .ep-topbar {
-
         grid-template-columns:
             1fr auto;
 
         gap: 10px;
+
+        padding-bottom:
+            17px;
     }
 
-
     .ep-top-center {
-
         display: none;
     }
 
-
-    .ep-top-label {
-
-        font-size: 6px;
-    }
-
-
+    .ep-top-label,
     .ep-top-date {
+        font-size:
+            6px;
 
-        font-size: 6px;
+        letter-spacing:
+            2px;
     }
 
 
     /* HERO */
 
     .ep-hero {
+        display:
+            flex;
 
-        display: flex;
+        flex-direction:
+            column;
 
-        flex-direction: column;
+        min-height:
+            auto;
 
-        min-height: auto;
-
-        margin-top: 20px;
+        margin-top:
+            10px;
     }
 
 
     /* IMAGE FIRST */
 
     .ep-visual {
+        order:
+            1;
 
-        order: 1;
+        width:
+            100%;
 
-        width: 100%;
+        height:
+            435px;
 
-        height: 430px;
+        margin-top:
+            10px;
     }
-
 
     .ep-image-frame {
+        top:
+            12px;
 
-        top: 15px;
+        right:
+            7%;
 
-        right: 6%;
+        width:
+            82%;
 
-        width: 82%;
-
-        height: 390px;
+        height:
+            395px;
 
         border-radius:
-            48% 48% 0 0;
+            50% 50% 10px 10px;
     }
 
+    .ep-image-frame::before {
+        inset:
+            8px;
+    }
+
+
+    /* RINGS */
 
     .ep-ring-one {
+        width:
+            300px;
 
-        width: 300px;
-        height: 300px;
+        height:
+            300px;
 
-        top: 70px;
-        right: -10px;
+        top:
+            70px;
+
+        right:
+            -8px;
     }
-
 
     .ep-ring-two {
+        width:
+            350px;
 
-        width: 350px;
-        height: 350px;
+        height:
+            350px;
 
-        top: 45px;
-        right: -35px;
+        top:
+            45px;
+
+        right:
+            -35px;
     }
 
+
+    /* PHOTO LABEL */
 
     .ep-photo-label {
+        right:
+            11%;
 
-        right: 12%;
+        bottom:
+            30px;
 
-        bottom: 35px;
+        gap:
+            9px;
     }
-
 
     .ep-photo-label span {
+        font-size:
+            23px;
 
-        font-size: 23px;
+        letter-spacing:
+            2px;
     }
-
 
     .ep-photo-label small {
+        font-size:
+            5px;
 
-        font-size: 5px;
+        letter-spacing:
+            1.5px;
     }
 
+
+    /* FLOWER */
 
     .ep-flower {
+        left:
+            2%;
 
-        left: 3%;
+        bottom:
+            28px;
 
-        bottom: 30px;
-
-        transform: scale(.75);
+        transform:
+            scale(.75);
     }
 
 
-    .ep-vertical-text {
+    /* VERTICAL */
 
-        display: none;
+    .ep-vertical-text {
+        display:
+            none;
     }
 
 
     /* CONTENT */
 
     .ep-content {
+        order:
+            2;
 
-        order: 2;
-
-        width: 100%;
+        width:
+            100%;
 
         padding:
-            35px 3% 20px;
+            32px 3% 15px;
     }
-
-
-    .ep-number {
-
-        width: 55px;
-        height: 55px;
-
-        font-size: 22px;
-
-        margin-bottom: 22px;
-    }
-
 
     .ep-small-title {
+        font-size:
+            6px;
 
-        font-size: 6px;
+        letter-spacing:
+            2.7px;
 
-        letter-spacing: 3px;
+        margin-bottom:
+            18px;
     }
-
 
     .ep-title {
+        font-size:
+            82px;
 
-        font-size: 82px;
-
-        line-height: .68;
+        line-height:
+            .67;
     }
-
 
     .ep-title span {
+        font-size:
+            70px;
 
-        font-size: 70px;
+        margin-left:
+            38px;
 
-        margin-left: 40px;
+        margin-top:
+            17px;
     }
-
 
     .ep-location-line {
+        margin-top:
+            34px;
 
-        margin-top: 35px;
+        font-size:
+            6px;
 
-        font-size: 6px;
+        letter-spacing:
+            2px;
     }
 
+    .ep-line {
+        width:
+            42px;
+    }
 
     .ep-description {
-
-        max-width: 100%;
-
-        font-size: 8px;
-
-        line-height: 1.9;
+        max-width:
+            100%;
 
         margin:
-            22px 0 28px;
-    }
+            21px 0 28px;
 
+        font-size:
+            8px;
 
-    /* EVENTS */
-
-    .ep-events {
-
-        max-width: 100%;
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-        gap: 5px;
-    }
-
-
-    .ep-event {
-
-        gap: 8px;
-    }
-
-
-    .ep-event-symbol {
-
-        width: 25px;
-        height: 25px;
-
-        font-size: 10px;
-    }
-
-
-    .ep-event strong {
-
-        font-size: 6px;
-    }
-
-
-    .ep-event small {
-
-        font-size: 4px;
+        line-height:
+            1.9;
     }
 
 
     /* BUTTON */
 
-    .ep-location-button {
+    .venue-map {
+        width:
+            fit-content;
 
-        margin-top: 25px;
+        padding:
+            13px 17px;
 
-        font-size: 6px;
+        font-size:
+            6px;
+
+        letter-spacing:
+            1.5px;
+    }
+
+    .ep-location-icon {
+        font-size:
+            14px;
+    }
+
+    .venue-map b {
+        font-size:
+            14px;
     }
 
 
     /* BOTTOM */
 
     .ep-bottom {
+        margin-top:
+            30px;
 
-        margin-top: 35px;
+        padding-top:
+            42px;
     }
 
+    .ep-bottom-line {
+        margin-top:
+            -48px;
+    }
+
+    .ep-bottom p {
+        font-size:
+            6px;
+
+        letter-spacing:
+            2.5px;
+    }
 
     .ep-bottom h2 {
-
-        font-size: 34px;
+        font-size:
+            35px;
     }
 
-
     .ep-names {
-
-        font-size: 26px;
+        font-size:
+            27px;
     }
 
 
     /* BACKGROUND */
 
     .ep-bg-word {
+        top:
+            10%;
 
-        top: 10%;
+        right:
+            -20%;
 
-        right: -15%;
+        font-size:
+            175px;
 
-        font-size: 180px;
+        letter-spacing:
+            -10px;
     }
-
 
     .ep-leaf-one {
-
-        font-size: 150px;
+        font-size:
+            145px;
     }
-
 
     .ep-leaf-two {
-
-        font-size: 180px;
+        font-size:
+            180px;
     }
-
 }
 
 
@@ -1453,61 +1458,80 @@
 
 @media (max-width: 380px) {
 
-    .ep-title {
+    .ep-page {
+        padding-left:
+            14px;
 
-        font-size: 70px;
+        padding-right:
+            14px;
     }
 
+    .ep-title {
+        font-size:
+            70px;
+    }
 
     .ep-title span {
+        font-size:
+            59px;
 
-        font-size: 60px;
-
-        margin-left: 30px;
+        margin-left:
+            29px;
     }
-
 
     .ep-visual {
-
-        height: 390px;
+        height:
+            390px;
     }
-
 
     .ep-image-frame {
-
-        height: 350px;
+        height:
+            350px;
     }
 
-
-    .ep-event strong {
-
-        font-size: 5px;
+    .ep-photo-label span {
+        font-size:
+            20px;
     }
 
-
-    .ep-event small {
-
-        display: none;
+    .ep-bottom h2 {
+        font-size:
+            31px;
     }
 
+    .ep-names {
+        font-size:
+            24px;
+    }
 }
 
 
 /* ============================================================
-   REDUCED MOTION
+   ACCESSIBILITY
    ============================================================ */
 
 @media (prefers-reduced-motion: reduce) {
 
+    .ep-content,
+    .ep-visual,
     .ep-flower,
+    .ep-ring,
     .ep-image-frame,
     .ep-image-frame img,
-    .ep-event,
-    .ep-location-button {
+    .venue-map {
+        animation:
+            none !important;
 
-        animation: none !important;
+        transition:
+            none !important;
 
-        transition: none !important;
+        transform:
+            none !important;
     }
 
+    .ep-content,
+    .ep-visual {
+        opacity:
+            1;
+    }
 }
