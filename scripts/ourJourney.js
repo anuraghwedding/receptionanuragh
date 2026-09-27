@@ -621,7 +621,7 @@ function initializeOurJourney() {
                     /*
                      * Touch
                      */
-                    mobileScrollSupport: false,
+                    mobileScrollSupport: true,
 
                     swipeDistance: 18,
 
@@ -680,7 +680,7 @@ function initializeOurJourney() {
                     /*
                      * Interaction
                      */
-                    mobileScrollSupport: false,
+                    mobileScrollSupport: true,
 
                     swipeDistance: 25,
 
