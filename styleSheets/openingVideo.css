@@ -1,10 +1,3 @@
-/* ================================================================
-   DIYA OPENING — INDIAN WEDDING INVITATION
-   Rewritten for a richer, more vibrant, more authentic look:
-   deep wine & maroon backdrop, marigold/saffron gold accents,
-   a warmer realistic flame, and gold-foil typography.
-================================================================= */
-
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Playfair+Display:wght@500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap');
 
 .diya-opening {
@@ -49,11 +42,6 @@
     pointer-events: none;
 }
 
-
-/* ================================================================
-   BACKGROUND LAYERS
-================================================================= */
-
 .diya-background {
     position: absolute;
     inset: 0;
@@ -61,7 +49,6 @@
     pointer-events: none;
 }
 
-/* subtle jaali / mandala dot texture for richness */
 .diya-background::before {
     content: "";
     position: absolute;
@@ -75,7 +62,6 @@
     mix-blend-mode: screen;
 }
 
-/* warm diagonal gold sheen */
 .diya-background::after {
     content: "";
     position: absolute;
@@ -129,11 +115,6 @@
     transform: translate(-50%, -50%) scale(2.9);
 }
 
-
-/* ================================================================
-   PARTICLES — golden sparks / marigold dust
-================================================================= */
-
 .diya-particles {
     position: absolute;
     inset: 0;
@@ -169,11 +150,6 @@
     60%  { opacity: 1; }
     100% { opacity: 0; transform: translate3d(var(--particle-x), -150px, 0) scale(1.2); }
 }
-
-
-/* ================================================================
-   MANDALA
-================================================================= */
 
 .diya-mandala {
     position: absolute;
@@ -222,11 +198,6 @@
     text-shadow: 0 0 28px rgba(255, 205, 110, .55);
 }
 
-
-/* ================================================================
-   CONTENT
-================================================================= */
-
 .diya-content {
     position: relative;
     z-index: 10;
@@ -237,11 +208,6 @@
     align-items: center;
     justify-content: center;
 }
-
-
-/* ================================================================
-   INTRO
-================================================================= */
 
 .diya-intro {
     position: absolute;
@@ -311,11 +277,6 @@
     font-style: italic;
 }
 
-
-/* ================================================================
-   DIYA HOLDER
-================================================================= */
-
 .diya-holder {
     position: relative;
     width: 220px;
@@ -346,11 +307,6 @@
     pointer-events: none;
     transition: opacity 1s ease, transform 1s ease;
 }
-
-
-/* ================================================================
-   FLAME — layered for a more realistic glow
-================================================================= */
 
 .diya-flame-glow {
     position: absolute;
@@ -414,11 +370,6 @@
     box-shadow: 0 0 10px #fff6cf, 0 0 20px rgba(255, 220, 140, .7);
 }
 
-
-/* ================================================================
-   WICK
-================================================================= */
-
 .diya-wick {
     position: absolute;
     left: 50%;
@@ -429,11 +380,6 @@
     border-radius: 5px;
     background: linear-gradient(180deg, #4a2c1c, #241109);
 }
-
-
-/* ================================================================
-   DIYA BOWL — brass, more metallic & vibrant
-================================================================= */
 
 .diya-bowl {
     position: absolute;
@@ -484,11 +430,6 @@
     filter: blur(1px);
 }
 
-
-/* ================================================================
-   PLATE / THALI
-================================================================= */
-
 .diya-plate {
     position: absolute;
     width: 150px;
@@ -509,8 +450,6 @@
     opacity: 0.7;
 }
 
-
-/* Remove the visible oval lines */
 .diya-plate span {
     display: none !important;
 }
@@ -529,11 +468,6 @@
 .diya-plate span:nth-child(2) { left: 76px; background: var(--rani-pink); box-shadow: 0 0 9px rgba(224, 86, 140, .8); }
 .diya-plate span:nth-child(3) { right: 76px; background: var(--rani-pink); box-shadow: 0 0 9px rgba(224, 86, 140, .8); }
 .diya-plate span:nth-child(4) { right: 36px; }
-
-
-/* ================================================================
-   CLICK HINT
-================================================================= */
 
 .diya-click-hint {
     position: absolute;
@@ -576,11 +510,6 @@
     0%, 100% { transform: translate(-50%, 0); }
     50%      { transform: translate(-50%, 6px); }
 }
-
-
-/* ================================================================
-   REVEAL — invitation card
-================================================================= */
 
 .diya-reveal {
     position: absolute;
@@ -699,11 +628,6 @@
     letter-spacing: 3px;
 }
 
-
-/* ================================================================
-   ENTER BUTTON — gold pill with shimmer sweep
-================================================================= */
-
 .diya-enter {
     position: relative;
     display: inline-flex;
@@ -750,11 +674,6 @@
 
 .diya-enter:active { transform: translateY(-1px) scale(.98); }
 
-
-/* ================================================================
-   BOTTOM
-================================================================= */
-
 .diya-bottom {
     position: absolute;
     left: 50%;
@@ -775,11 +694,6 @@
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(232, 188, 99, .45), transparent);
 }
-
-
-/* ================================================================
-   LIGHT BURST
-================================================================= */
 
 .diya-light-burst {
     position: absolute;
@@ -805,11 +719,6 @@
     100% { transform: translate(-50%, -50%) scale(32); opacity: 0; }
 }
 
-
-/* ================================================================
-   MOBILE
-================================================================= */
-
 @media (max-width: 768px) {
     .diya-intro { top: 12%; width: 90%; }
     .diya-intro-blessing { font-size: 19px; }
@@ -833,11 +742,6 @@
 
     .diya-bottom { bottom: 16px; }
 }
-
-
-/* ================================================================
-   GRAND GANESHA WEDDING SCENE
-================================================================= */
 
 .grand-wedding-scene {
     position: relative;
@@ -1023,13 +927,6 @@
     .grand-scroll-indicator { bottom: 25px; }
     .grand-scroll-indicator span { font-size: 7px; letter-spacing: 2.5px; }
 }
-/* =========================================================
-   VIBRANT LIGHT EFFECT AFTER DIYA IS LIT
-   ========================================================= */
-
-/* =========================================================
-   DIYA OPENING — BASE BACKGROUND
-   ========================================================= */
 
 .diya-opening {
     position: relative;
@@ -1058,15 +955,6 @@
         box-shadow 2s ease;
 }
 
-
-/* ---------------------------------------------------------
-   AFTER DIYA IS CLICKED
-   --------------------------------------------------------- */
-
-/* =========================================================
-   AFTER DIYA IS LIT
-   ========================================================= */
-
 .diya-opening.is-lit {
     background:
         radial-gradient(
@@ -1083,9 +971,6 @@
     box-shadow:
         inset 0 0 220px rgba(255, 226, 145, 0.35);
 }
-/* =========================================================
-   VIBRANT LIGHT RADIANCE
-   ========================================================= */
 
 .diya-opening::after {
     content: "";
@@ -1112,9 +997,6 @@
 
     z-index: 0;
 }
-
-
-/* Light appears after clicking diya */
 
 .diya-opening.is-lit::after {
     opacity: 1;
@@ -1158,11 +1040,7 @@
         filter: brightness(1);
     }
 }
-/* =========================================================
-   VIBRANT BACKGROUND + HIGH CONTRAST TEXT
-   ========================================================= */
 
-/* Main intro text */
 .diya-opening.is-lit .diya-intro-small,
 .diya-opening.is-lit .diya-instruction,
 .diya-opening.is-lit .diya-instruction-sub {
@@ -1171,8 +1049,6 @@
         0 1px 2px rgba(255, 255, 255, 0.45);
 }
 
-
-/* Sanskrit blessing */
 .diya-opening.is-lit .diya-intro-blessing,
 .diya-opening.is-lit .diya-blessing {
     color: #5a1018;
@@ -1180,8 +1056,6 @@
         0 1px 2px rgba(255, 230, 170, 0.7);
 }
 
-
-/* Small decorative stars */
 .diya-opening.is-lit .diya-top-symbol,
 .diya-opening.is-lit .diya-reveal-symbol {
     color: #4a0c13;
@@ -1189,18 +1063,11 @@
         0 0 8px rgba(255, 239, 180, 0.8);
 }
 
-
-/* Small divider */
 .diya-opening.is-lit .diya-small-line {
     background: #65151d;
     box-shadow:
         0 0 8px rgba(255, 235, 170, 0.7);
 }
-
-
-/* =========================================================
-   REVEALED INVITATION
-   ========================================================= */
 
 .diya-opening.is-lit .diya-family {
     color: #3d0b12;
@@ -1209,40 +1076,27 @@
         0 1px 2px rgba(255, 240, 190, 0.6);
 }
 
-
-/* Names */
 .diya-opening.is-lit .diya-names {
     color: #3b0710;
     text-shadow:
         0 2px 4px rgba(255, 225, 145, 0.8);
 }
 
-
-/* Ampersand */
 .diya-opening.is-lit .diya-names b {
     color: #6d171d;
 }
 
-
-/* Tagline */
 .diya-opening.is-lit .diya-tagline {
     color: #4c0c13;
     font-weight: 600;
     letter-spacing: 3px;
 }
 
-
-/* Wedding date */
 .diya-opening.is-lit .diya-date {
     color: #3a0710;
     font-weight: 700;
     letter-spacing: 4px;
 }
-
-
-/* =========================================================
-   GOLD DIVIDER
-   ========================================================= */
 
 .diya-opening.is-lit .diya-gold-divider span {
     background: #64141b;
@@ -1251,11 +1105,6 @@
 .diya-opening.is-lit .diya-gold-divider b {
     color: #5b0d15;
 }
-
-
-/* =========================================================
-   ENTER BUTTON
-   ========================================================= */
 
 .diya-opening.is-lit .diya-enter {
     background:
@@ -1274,7 +1123,6 @@
         0 0 18px rgba(255, 220, 140, 0.35);
 }
 
-
 .diya-opening.is-lit .diya-enter:hover {
     background:
         linear-gradient(
@@ -1288,16 +1136,9 @@
     transform: translateY(-3px);
 }
 
-
-/* Arrow */
 .diya-opening.is-lit .diya-enter b {
     color: #f8d98e;
 }
-
-
-/* =========================================================
-   CLICK HINT BEFORE LIGHTING
-   ========================================================= */
 
 .diya-click-hint {
     color: #fff1cf;
@@ -1306,18 +1147,12 @@
         0 2px 8px rgba(0, 0, 0, 0.65);
 }
 
-
-/* =========================================================
-   BOTTOM TEXT
-   ========================================================= */
-
 .diya-opening.is-lit .diya-bottom {
     color: #4a0b13;
 
     text-shadow:
         0 1px 3px rgba(255, 240, 190, 0.7);
 }
-
 
 .diya-opening.is-lit .diya-bottom i {
     background: #5c1018;
@@ -1359,9 +1194,6 @@
         filter 1.5s ease;
 }
 
-
-/* Glow expands after diya is lit */
-
 .diya-opening.is-lit .diya-glow-background {
     transform:
         translate(-50%, -50%)
@@ -1371,9 +1203,6 @@
 
     filter: blur(35px);
 }
-/* =========================================================
-   MANDALA LIGHTING
-   ========================================================= */
 
 .diya-mandala {
     transition:
@@ -1382,9 +1211,6 @@
         filter 1.5s ease;
 }
 
-
-/* Before lighting */
-
 .diya-mandala-ring {
     transition:
         border-color 1.5s ease,
@@ -1392,16 +1218,12 @@
         opacity 1.5s ease;
 }
 
-
-/* After lighting */
-
 .diya-opening.is-lit .diya-mandala {
     transform: scale(1.12);
     filter:
         drop-shadow(0 0 8px rgba(255, 224, 135, .8))
         drop-shadow(0 0 25px rgba(255, 145, 45, .55));
 }
-
 
 .diya-opening.is-lit .diya-mandala-ring {
     border-color: rgba(93, 16, 24, .48);
@@ -1411,7 +1233,6 @@
         inset 0 0 10px rgba(255, 231, 160, .25);
 }
 
-
 .diya-opening.is-lit .diya-mandala-center {
     color: #57101a;
 
@@ -1419,9 +1240,6 @@
         0 0 8px rgba(255, 237, 173, .9),
         0 0 20px rgba(255, 180, 70, .6);
 }
-/* =========================================================
-   MOON / AMBIENT GLOW
-   ========================================================= */
 
 .diya-moon-glow {
     transition:
@@ -1429,7 +1247,6 @@
         transform 2s ease,
         background 1.8s ease;
 }
-
 
 .diya-opening.is-lit .diya-moon-glow {
     opacity: .85;
@@ -1444,9 +1261,6 @@
             transparent 70%
         );
 }
-/* =========================================================
-   GOLDEN LIGHT PARTICLES
-   ========================================================= */
 
 .diya-particle {
     background: #fff0b5;
@@ -1460,7 +1274,6 @@
         box-shadow 1s ease;
 }
 
-
 .diya-opening.is-lit .diya-particle {
     background: #fff3c4;
 
@@ -1468,9 +1281,6 @@
         0 0 6px #fff1b8,
         0 0 16px rgba(255, 160, 50, .9);
 }
-/* =========================================================
-   CENTRAL LIGHT BURST
-   ========================================================= */
 
 .diya-light-burst {
     position: absolute;
@@ -1496,13 +1306,11 @@
     z-index: 3;
 }
 
-
 .diya-opening.is-bursting .diya-light-burst {
     animation: diyaRadiantBurst 1.4s
         cubic-bezier(.16, 1, .3, 1)
         forwards;
 }
-
 
 @keyframes diyaRadiantBurst {
 
@@ -1561,19 +1369,10 @@
         opacity 1.5s ease;
 }
 
-
-/* After diya is lit */
-
 .diya-opening.is-lit .diya-glow-background {
     opacity: 1;
     transform: none;
 }
-/* =========================================================
-   DIYA — FLAME SHOULD NOT BE VISIBLE INITIALLY
-   Flame appears only after the user clicks the diya
-   ========================================================= */
-
-/* ---------- BEFORE CLICK ---------- */
 
 .diya-flame {
     opacity: 0 !important;
@@ -1595,13 +1394,6 @@
 
     pointer-events: none;
 }
-
-
-/* Hide the wick initially as well */
-/* =========================================================
-   DIYA BATTI / WICK
-   Visible before and after lighting
-   ========================================================= */
 
 .diya-wick {
     position: absolute;
@@ -1634,9 +1426,6 @@
     z-index: 5;
 }
 
-
-/* ---------- AFTER DIYA IS CLICKED ---------- */
-
 .diya-opening.is-lit .diya-flame {
     opacity: 1 !important;
 
@@ -1653,7 +1442,6 @@
         alternate;
 }
 
-
 .diya-opening.is-lit .diya-flame-glow {
     opacity: 1 !important;
 
@@ -1661,7 +1449,6 @@
         translateX(-50%)
         scale(2.3) !important;
 }
-
 
 .diya-opening.is-lit .diya-wick {
     opacity: 1 !important;
@@ -1673,4 +1460,141 @@
     color: #d4af37;
     margin-top: 8px;
     text-align: center;
+}
+
+.diya-reveal-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #ffffff;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.8s ease;
+}
+
+.diya-reveal-bg img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transform: scale(.96);
+    transition: transform 3s cubic-bezier(.16, 1, .3, 1);
+}
+
+.diya-opening.is-revealed .diya-reveal-bg { opacity: 1; }
+.diya-opening.is-revealed .diya-reveal-bg img { transform: scale(1); }
+
+.diya-reveal {
+    top: auto;
+    bottom: 10%;
+    transform: translate(-50%, 20px) scale(.9);
+}
+
+.diya-opening.is-revealed .diya-reveal {
+    transform: translate(-50%, 0) scale(1);
+}
+
+.diya-enter {
+    width: 58px;
+    height: 58px;
+    margin-top: 0;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.diya-opening {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.diya-reveal {
+    bottom: max(10%, env(safe-area-inset-bottom));
+}
+
+@media (max-width: 1024px) {
+    .diya-enter {
+        width: 54px;
+        height: 54px;
+    }
+}
+
+@media (max-width: 768px) {
+    .diya-reveal {
+        bottom: max(8%, env(safe-area-inset-bottom));
+        width: 92vw;
+    }
+
+    .diya-enter {
+        width: 50px;
+        height: 50px;
+    }
+
+    .diya-enter b {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .diya-reveal {
+        bottom: max(7%, env(safe-area-inset-bottom));
+    }
+
+    .diya-enter {
+        width: 46px;
+        height: 46px;
+    }
+}
+
+@media (max-height: 560px) and (orientation: landscape) {
+    .diya-reveal {
+        bottom: 6%;
+    }
+
+    .diya-enter {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .diya-enter {
+        width: 66px;
+        height: 66px;
+    }
+
+    .diya-enter b {
+        font-size: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .diya-reveal-bg,
+    .diya-reveal-bg img {
+        transition-duration: .01s;
+    }
+}
+
+@media (max-width: 768px) {
+    .diya-reveal-bg {
+        background: transparent;
+    }
+
+    .diya-reveal-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        transform: none;
+    }
+
+    .diya-opening.is-revealed .diya-reveal-bg img {
+        transform: none;
+    }
 }
