@@ -135,6 +135,16 @@
     text-align: left;
 }
 
+.rsvp-full {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1.5px;
+    color: #a4502d;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
