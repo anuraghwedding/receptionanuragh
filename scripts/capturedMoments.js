@@ -1,132 +1,3 @@
-// const swiperElement = document.querySelector(".capturedSwiper");
-
-// if (swiperElement) {
-
-//     new Swiper(".capturedSwiper", {
-
-//         effect: "coverflow",
-
-//         grabCursor: true,
-
-//         centeredSlides: true,
-
-//         loop: true,
-
-//         slidesPerView: "auto",
-
-//         speed: 800,
-
-//         autoplay: {
-//             delay: 3000,
-//             disableOnInteraction: false,
-//         },
-
-//         coverflowEffect: {
-
-//             rotate: 0,
-
-//             stretch: 0,
-
-//             depth: 250,
-
-//             modifier: 1.8,
-
-//             scale: 0.85,
-
-//             slideShadows: false,
-
-//         },
-
-//         navigation: {
-
-//             nextEl: ".swiper-button-next",
-
-//             prevEl: ".swiper-button-prev",
-
-//         },
-
-//         pagination: {
-
-//             el: ".swiper-pagination",
-
-//             clickable: true,
-
-//         },
-
-//         breakpoints: {
-
-//             0: {
-
-//                 spaceBetween: -60,
-
-//             },
-
-//             768: {
-
-//                 spaceBetween: -100,
-
-//             },
-
-//             1200: {
-
-//                 spaceBetween: -140,
-
-//             }
-
-//         }
-
-//     });
-
-// }
-
-// function initializeCapturedMoments() {
-
-//     const swiper = document.querySelector(".capturedSwiper");
-
-//     if (!swiper) return;
-
-//     new Swiper(".capturedSwiper", {
-
-//         effect: "coverflow",
-
-//         grabCursor: true,
-
-//         centeredSlides: true,
-
-//         slidesPerView: "auto",
-
-//         loop: true,
-
-//         speed: 800,
-
-//         autoplay: {
-//             delay: 3000,
-//             disableOnInteraction: false,
-//         },
-
-//         coverflowEffect: {
-//             rotate: 0,
-//             stretch: -80,
-//             depth: 350,
-//             modifier: 2,
-//             scale: 0.8,
-//             slideShadows: false,
-//         },
-
-//         navigation: {
-//             nextEl: ".swiper-button-next",
-//             prevEl: ".swiper-button-prev",
-//         },
-
-//         pagination: {
-//             el: ".swiper-pagination",
-//             clickable: true,
-//         }
-
-//     });
-
-// }
-
 function initializeCapturedMoments() {
 
     const marquee = document.querySelector(".gallery-marquee");
@@ -158,6 +29,24 @@ function initializeCapturedMoments() {
     let position = 0;
 
     let lastTime = performance.now();
+
+    /* -----------------------------------------------------
+   PAUSE WHILE USER TOUCHES THE GALLERY
+----------------------------------------------------- */
+
+    let isPaused = false;
+
+    const pause = () => { isPaused = true; };
+    const resume = () => { isPaused = false; };
+
+    // Touch screens
+    marquee.addEventListener("touchstart", pause, { passive: true });
+    marquee.addEventListener("touchend", resume, { passive: true });
+    marquee.addEventListener("touchcancel", resume, { passive: true });
+
+    // Mouse press-and-hold (desktop)
+    marquee.addEventListener("mousedown", pause);
+    window.addEventListener("mouseup", resume);
 
 
     /* -----------------------------------------------------
@@ -267,8 +156,10 @@ function initializeCapturedMoments() {
            Move continuously
         */
 
-        position -=
-            speed * delta;
+    if (!isPaused) {
+            position -= speed * delta;
+        }
+
 
 
         const setWidth =
