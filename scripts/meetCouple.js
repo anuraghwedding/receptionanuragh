@@ -17,10 +17,10 @@ function initializeMeetCouple() {
         "./public/images/gallery/2.webp",
         "./public/images/gallery/3.webp",
         "./public/images/gallery/4.webp",
-        "./public/images/gallery/5.webp",
-        "./public/images/gallery/6.webp",
-        "./public/images/gallery/7.webp",
-        "./public/images/gallery/8.webp"
+        "./public/images/gallery/5.jpeg",
+        "./public/images/gallery/6.jpeg",
+        "./public/images/gallery/7.jpeg",
+        "./public/images/gallery/8.jpeg"
     ];
 
     /* =========================================
