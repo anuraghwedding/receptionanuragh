@@ -774,7 +774,7 @@
         font-size: 14px;
     }
 
-    .event-card{
+    .event-card {
         width: 90vw;
     }
 
@@ -802,5 +802,74 @@
     .btn {
         font-size: 11px;
         padding: 10px;
+    }
+}
+
+/* Scroll down hint below the cards */
+.scroll-hint {
+    position: absolute;
+    left: 50%;
+    bottom: 22px;
+    transform: translateX(-50%);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+    pointer-events: none;
+    animation: scrollHintBob 2.2s ease-in-out infinite;
+}
+
+.scroll-hint-text {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #a88d58;
+}
+
+.scroll-hint-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: #8c734b;
+}
+
+.scroll-hint-arrow {
+    font-size: 18px;
+    color: #c8a15d;
+    line-height: 1;
+}
+
+@keyframes scrollHintBob {
+
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, 6px);
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* leave room so the hint never overlaps the card */
+    .event-card-section {
+        padding-bottom: 80px;
+    }
+
+    .scroll-hint {
+        bottom: 14px;
+    }
+
+    .scroll-hint-text {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .scroll-hint-sub {
+        font-size: 12px;
     }
 }

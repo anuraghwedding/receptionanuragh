@@ -637,7 +637,7 @@
     padding: 14px 26px;
     overflow: hidden;
     border: 1px solid rgba(255, 214, 130, .55);
-    border-radius: 40px;
+    border-radius: 10px;
     background: linear-gradient(135deg, rgba(140, 55, 30, .55), rgba(90, 25, 20, .55));
     color: var(--ivory);
     font-family: "Cormorant Garamond", serif;
@@ -1500,12 +1500,12 @@
 }
 
 .diya-enter {
-    width: 58px;
-    height: 58px;
+    width: 180px;
+    height: 50px;
     margin-top: 0;
     padding: 0;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 20px;
 }
 
 .diya-opening {
@@ -1548,8 +1548,8 @@
     }
 
     .diya-enter {
-        width: 90px;
-        height: 90px;
+        width: 160px;
+        height: 70px;
     }
 }
 
@@ -1566,7 +1566,7 @@
 
 @media (min-width: 1600px) {
     .diya-enter {
-        width: 66px;
+        width: 80px;
         height: 66px;
     }
 
